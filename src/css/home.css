@@ -1,0 +1,97 @@
+.hero-container {
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/hero-img.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(44,44,44,1), rgba(44,44,44,0.83), rgba(71,71,71,0.72));
+    opacity: 1;
+}
+.hero-grid {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-header {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 8vh auto 20vh;
+    place-items: center;
+}
+.hero-header h2 {
+    text-transform: uppercase;
+    font-size: clamp(1.4rem, 1.8vw, 2rem);
+    letter-spacing: 3px;
+}
+.hero-header h1 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: clamp(3.9rem, 5vw, 6.5rem);
+    line-height: 70px;
+}
+.hero-scroll-icon {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    right: 50%;
+    width: auto;
+}
+/* btn */
+.contact-btn{
+  position: relative;
+  display: inline-flex;
+  width: clamp(15.63rem, 19.2vw, 18.75rem);
+  height: clamp(3.75rem, 5vw, 4.38rem);
+  perspective: 1000px;
+}
+.contact-btn a{
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  letter-spacing: 2px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+}
+.contact-btn a:before,
+.contact-btn a:after{
+  position: absolute;
+  content: "CONTACT ME";
+  height: clamp(3.75rem, 5vw, 4.38rem);
+  width: clamp(15.63rem, 19.2vw, 18.75rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  box-sizing: border-box;
+}
+.contact-btn a:before{
+  color: #fff;
+  background: transparent;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.contact-btn a:after{
+  color: var(--text-color);
+  background: black;
+  border: 3px solid black;
+  transform: rotateX(90deg) translateZ(clamp(1.56rem, 2.5vw, 2.19rem));
+}
+.contact-btn a:hover{
+  transform: translateZ(-100px) rotateX(-90deg);
+}
+
+@media screen and (max-width: 800px) {
+    .hero-scroll-icon {
+        width: 40px;
+    }
+}
