@@ -71,10 +71,5 @@ body {
   color: white;
   font-weight: 500;
   letter-spacing: 2px;
-  width: 300px;
   text-align: center;
-}
-
-.contact-btn-border {
-  border: 3px solid white;
 }
