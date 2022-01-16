@@ -100,13 +100,16 @@
 }
 .txt-rotate > .wrap { border-right: 0.08em solid white }
 
+.section {
+  width: 100%;
+  height: auto;
+  padding: 7vw clamp(1.2rem, 6vw, 17rem);
+}
+
 /* About Section */
 
 .about-section {
-  height: auto;
-  width: 100%;
   background-color: var(--gray-primary-1);
-  padding: 6vw clamp(1.2rem, 6vw, 17rem);
   display: grid;
   grid-template-rows: 10vh 30vh auto;
   place-items: center;
@@ -164,10 +167,7 @@
   color: var(--text-color);
 }
 .skills-section-overlay {
-  width: 100%;
-  height: auto;
   background: linear-gradient(to bottom, rgba(10,10,10,0.7), rgba(0,0,0,0.7));
-  padding: 6vw clamp(1.2rem, 6vw, 17rem);
   display: grid;
   grid-template-rows: auto 13vh auto;
   align-items: center;
@@ -223,13 +223,9 @@
 /* Services */
 
 .services-section {
-  width: 100%;
-  height: auto;
-  padding: 7vw clamp(1.2rem, 6vw, 17rem);
   background-color: var(--gray-primary-1);
   color: var(--text-color);
   display: grid;
-  grid-template-rows: auto auto auto;
   align-items: center;
 }
 .services-section-header {
@@ -250,6 +246,8 @@
   text-transform: capitalize;
   font-size: clamp(2.5rem, 3.8vw, 3.8rem);
   font-weight: 400;
+  text-align: center;
+  color: var(--text-color);
 }
 .service-cards {
   display: grid;
@@ -263,6 +261,9 @@
   place-items: center;
   height: 450px;
   padding: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 7px 29px 0px,
+  rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .service-card img {
   width: 100px;
@@ -295,4 +296,10 @@
 .achievement p {
   text-transform: capitalize;
   font-size: 1.1rem;
+}
+
+/* Pricing Section */
+
+.pricing-section {
+  background-color: var(--gray-primary-6);
 }

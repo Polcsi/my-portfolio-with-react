@@ -4,7 +4,7 @@ import { achievements } from "../data";
 
 const Services = () => {
   return (
-    <section className="services-section" name="services">
+    <section className="services-section section" name="services">
       <div className="services-section-header section-header">
         <h2>services</h2>
         <h1>what i am great at</h1>
