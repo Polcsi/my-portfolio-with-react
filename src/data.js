@@ -3,35 +3,51 @@ import { FaGithub, FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import addressInfoIcon from "./icons/address-info.svg";
 import profileInfoIcon from "./icons/profile-info.svg";
 import hobbiesInfoIcon from "./icons/hobbies-info.svg";
+import penIcon from "./icons/design.svg";
+import codeIcon from "./icons/code.svg";
+import loudSpeakerIcon from "./icons/loud_speaker.svg";
+import peopleIcon from "./icons/People.svg";
 
 export const links = [
   {
     id: 1,
+    type: "route",
     url: "/home",
     text: "home",
   },
   {
     id: 2,
-    url: "/home#about",
+    type: "scroll",
+    url: "about",
     text: "about",
   },
   {
     id: 3,
-    url: "/home#skills",
+    type: "scroll",
+    url: "skills",
     text: "skills",
   },
   {
     id: 4,
-    url: "/home#services",
+    type: "scroll",
+    url: "services",
     text: "services",
   },
   {
     id: 5,
+    type: "scroll",
+    url: "pricing",
+    text: "pricing",
+  },
+  {
+    id: 6,
+    type: "route",
     url: "/projects",
     text: "projects",
   },
   {
-    id: 6,
+    id: 7,
+    type: "route",
     url: "/contact",
     text: "contact",
   },
@@ -113,5 +129,53 @@ export const skillsInfo = [
     id: 6,
     title: "adobe xd",
     progress: "90",
+  },
+];
+export const services = [
+  {
+    id: 1,
+    title: "UI/UX Design",
+    icon: penIcon,
+    projects: 110,
+  },
+  {
+    id: 2,
+    title: "web development",
+    icon: codeIcon,
+    projects: 221,
+  },
+  {
+    id: 3,
+    title: "branding",
+    icon: loudSpeakerIcon,
+    projects: 40,
+  },
+  {
+    id: 4,
+    title: "logo design",
+    icon: peopleIcon,
+    projects: 331,
+  },
+];
+export const achievements = [
+  {
+    id: 1,
+    title: "years of experience",
+    count: 9,
+  },
+  {
+    id: 2,
+    title: "satisfied customers",
+    count: 200,
+  },
+  {
+    id: 3,
+    title: "design items",
+    count: 734,
+  },
+  {
+    id: 4,
+    title: "client served",
+    count: 124,
   },
 ];

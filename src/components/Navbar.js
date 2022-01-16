@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import logo from "../icons/logo.svg";
-import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { links, social } from "../data";
+import { social } from "../data";
 import "../css/nav.css";
+import NavLinks from "../components/NavLinks";
 
 function debounce(fn, ms) {
   let timer;
@@ -75,14 +75,7 @@ const Navbar = () => {
             </button>
           </div>
           <ul className="links" ref={linksRef}>
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id} onClick={() => setShowLinks(false)}>
-                  <Link to={url}>{text}</Link>
-                </li>
-              );
-            })}
+            <NavLinks setShowLinks={setShowLinks} />
           </ul>
           <ul className="social-icons">
             {social.map((item) => {

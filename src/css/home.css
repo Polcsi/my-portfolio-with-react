@@ -98,6 +98,7 @@
         width: 40px;
     }
 }
+.txt-rotate > .wrap { border-right: 0.08em solid white }
 
 /* About Section */
 
@@ -217,4 +218,81 @@
 }
 .skills-container article .percentage span {
   font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+/* Services */
+
+.services-section {
+  width: 100%;
+  height: auto;
+  padding: 7vw clamp(1.2rem, 6vw, 17rem);
+  background-color: var(--gray-primary-1);
+  color: var(--text-color);
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+}
+.services-section-header {
+  display: grid;
+  grid-gap: 1.2rem;
+  place-self: center;
+  margin-bottom: 5rem;
+}
+.section-header h2 {
+  text-align: center;
+  color: var(--green-primary);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  letter-spacing: 2px;
+}
+.section-header h1 {
+  text-transform: capitalize;
+  font-size: clamp(2.5rem, 3.8vw, 3.8rem);
+  font-weight: 400;
+}
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+.service-card {
+  background-color: var(--gray-primary-2);
+  display: grid;
+  grid-template-rows: 11rem 5rem .5rem;
+  place-items: center;
+  height: 450px;
+  padding: 4rem;
+}
+.service-card img {
+  width: 100px;
+}
+.service-card h1 {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.service-card p {
+  font-size: 1.2rem;
+}
+
+.achievements {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  place-items: center;
+  margin-top: 2rem;
+}
+.achievement {
+  display: grid;
+}
+.achievement h1 {
+  text-align: center;
+  color: var(--green-primary);
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+.achievement p {
+  text-transform: capitalize;
+  font-size: 1.1rem;
 }

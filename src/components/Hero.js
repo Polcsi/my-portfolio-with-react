@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../css/home.css";
 import scrollIcon from "../icons/scroll-icon.svg";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const rotate = useRef(null);
   var TxtRotate = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -47,21 +48,13 @@ const Hero = () => {
     }, delta);
   };
 
-  window.onload = function () {
-    var elements = document.getElementsByClassName("txt-rotate");
-    for (var i = 0; i < elements.length; i++) {
-      var toRotate = elements[i].getAttribute("data-rotate");
-      var period = elements[i].getAttribute("data-period");
-      if (toRotate) {
-        new TxtRotate(elements[i], JSON.parse(toRotate), period);
-      }
+  useEffect(() => {
+    let toRotate = rotate.current.getAttribute("data-rotate");
+    let period = rotate.current.getAttribute("data-period");
+    if (toRotate) {
+      new TxtRotate(rotate.current, JSON.parse(toRotate), period);
     }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid white }";
-    document.body.appendChild(css);
-  };
+  }, []);
 
   return (
     <div className="hero-container">
@@ -71,6 +64,7 @@ const Hero = () => {
           <h2>welcome to my website</h2>
           <h1>
             <span
+              ref={rotate}
               className="txt-rotate"
               data-period="2000"
               data-rotate='[ "web developer", "UX & UI Designer", "frontend developer", "backend developer", "IT engineer" ]'

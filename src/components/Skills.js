@@ -3,7 +3,7 @@ import { skillsInfo } from "../data";
 
 const Skills = () => {
   return (
-    <section className="skills-section">
+    <section className="skills-section" name="skills">
       <div className="skills-section-overlay">
         <div className="section-title skills-title">
           <h1>Skills</h1>
