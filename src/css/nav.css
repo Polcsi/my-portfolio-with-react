@@ -1,9 +1,10 @@
 nav {
     background: transparent;
     font-family: 'Poppins';
-    position: sticky;
+    position: fixed;
+    top: 0;
+    width: 100vw;
     z-index: 1000;
-    width: auto;
 }
 
 ul {
@@ -16,7 +17,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1.2rem 1.7rem;
 }
 
 .nav-toggle {
@@ -78,7 +79,7 @@ a {
   justify-content: space-evenly;
 }
 .icon {
-      color: var(--text-color);
+    color: var(--text-color);
     font-size: 2rem;
 }
   .icon:hover {
@@ -86,6 +87,7 @@ a {
   }
   .nav-center {
     position: relative;
+    transition: all .3s ease;
   }
   .links-container {
     position: fixed;
@@ -103,20 +105,25 @@ a {
 .close-nav-btn {
     font-size: 2rem;
 }
+  .nav-sticky {
+    background: var(--gray-primary-6);
+  }
 
 @media screen and (min-width: 800px) {
-    body {
-        overflow: auto !important;
-    }
     .mobile-nav {
         display: none;
     }
+    .nav-sticky {
+    background: var(--gray-primary-6);
+    padding: 1.5rem 1rem 1rem 1rem !important;
+  }
   .nav-center {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem 1rem 1rem 1rem;
-    width: 100vw;
+    padding: 2.8rem 1rem 1rem 1rem;
+    width: 100%;
+    transition: all .3s ease;
   }
   .nav-header {
     padding: 0;

@@ -18,6 +18,7 @@ function debounce(fn, ms) {
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const [scroll, setScroll] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
   const navHeaderRef = useRef(null);
@@ -28,7 +29,7 @@ const Navbar = () => {
       linksContainerRef.current.style.left = "0%";
       document.body.style.overflow = "hidden";
     } else {
-      linksContainerRef.current.style.left = "-100%";
+      linksContainerRef.current.style.left = "-110%";
       document.body.style.overflow = "auto";
     }
   }, [showLinks]);
@@ -48,10 +49,13 @@ const Navbar = () => {
       window.removeEventListener("resize", debouncedWindowResize);
     };
   }, [showLinks]);
+  window.addEventListener("scroll", function () {
+    this.scrollY > 50 ? setScroll(true) : setScroll(false);
+  });
 
   return (
     <nav>
-      <div className="nav-center">
+      <div className={scroll ? `nav-center nav-sticky` : "nav-center"}>
         <div className="nav-header" ref={navHeaderRef}>
           <img src={logo} alt="logo" className="logo" />
           <button className="nav-toggle" onClick={() => setShowLinks(true)}>

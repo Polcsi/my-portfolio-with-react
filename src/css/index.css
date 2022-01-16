@@ -14,6 +14,8 @@
     --gray-primary-4: #222226;
     --gray-primary-5: #1E1E21;
     --gray-primary-6: #282828;
+    --gray-primary-7: #212121;
+    --gray-primary-8: #0A0A0A;
     --green-primary: #43BE98;
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
@@ -58,7 +60,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   display: block;
-  position: relative;
+  overflow: auto;
 }
 
 .btn {

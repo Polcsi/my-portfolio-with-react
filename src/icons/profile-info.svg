@@ -1,0 +1,7 @@
+<svg id="profile-info" xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 95 95">
+  <g id="Ellipse_10" data-name="Ellipse 10" fill="none" stroke="#fff" stroke-width="1">
+    <circle cx="47.5" cy="47.5" r="47.5" stroke="none"/>
+    <circle cx="47.5" cy="47.5" r="47" fill="none"/>
+  </g>
+  <path id="Icon_open-star" data-name="Icon open-star" d="M18,0,13.5,13.5H0l11.25,9L6.75,36,18,27l11.25,9-4.5-13.5L36,13.5H22.5Z" transform="translate(29 29)" fill="#43be98"/>
+</svg>

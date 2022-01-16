@@ -1,25 +1,28 @@
 .hero-container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: url("../images/hero-img.jpg");
     background-size: cover;
     background-position: center;
-    position: absolute;
-    top: 0;
+    background-repeat: no-repeat;
     color: white;
+    position: relative;
 }
 
 .hero-overlay {
     position: absolute;
-    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     height: 100vh;
     background: linear-gradient(to top, rgba(44,44,44,1), rgba(44,44,44,0.83), rgba(71,71,71,0.72));
     opacity: 1;
 }
 .hero-grid {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +30,7 @@
 .hero-header {
     text-align: center;
     display: grid;
-    grid-template-rows: 8vh auto 20vh;
+    grid-template-rows: 12vh auto 20vh;
     place-items: center;
 }
 .hero-header h2 {
@@ -94,4 +97,124 @@
     .hero-scroll-icon {
         width: 40px;
     }
+}
+
+/* About Section */
+
+.about-section {
+  height: auto;
+  width: 100%;
+  background-color: var(--gray-primary-1);
+  padding: 6vw clamp(1.2rem, 6vw, 17rem);
+  display: grid;
+  grid-template-rows: 10vh 30vh auto;
+  place-items: center;
+}
+.section-title h1 {
+  text-align: center;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  letter-spacing: 3px;
+}
+.about-text {
+  width: 50vw;
+}
+.about-text p {
+  color: var(--text-color);
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.info {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  background-color: var(--gray-primary-7);
+  padding: 3rem;
+}
+
+.info article {
+  display: grid;
+  place-items: center;
+  grid-gap: 1.5rem;
+  color: var(--text-color);
+}
+
+.info article .info-title {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.info article .info-text {
+  text-align: center;
+}
+
+/* Skills Section */
+
+.skills-section {
+  width: 100%;
+  height: auto;
+  background: url("../images/skills-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: var(--text-color);
+}
+.skills-section-overlay {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.7), rgba(0,0,0,0.7));
+  padding: 6vw clamp(1.2rem, 6vw, 17rem);
+  display: grid;
+  grid-template-rows: auto 13vh auto;
+  align-items: center;
+}
+.skills-section .underline {
+  width: 10vw;
+  border-top: 4px solid white;
+  place-self: center;
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(26rem, 36vw, 39.5rem), 1fr));
+  gap: 2.5rem;
+}
+.skills-container article > .title {
+  grid-area: title;
+}
+.skills-container article > .percentage{
+  grid-area: percentage;
+  text-align: right;
+}
+.skills-container article > .progress-bar {
+  grid-area: progress;
+}
+.skills-container article {
+  display: grid;
+  grid-template-areas: 
+  'title   percentage'
+  'progress progress';
+}
+.progress-bar {
+  background-color: var(--gray-primary-6);
+  width: 100%;
+  height: clamp(2.5rem, 2.5vw, 3.13rem);
+  position: relative;
+}
+.progress-track {
+  content: '';
+  position: absolute;
+  background-color: var(--green-primary);
+  width: 50%;
+  height: clamp(2.5rem, 2.5vw, 3.13rem);
+}
+.skills-container article .title h3{
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  text-transform: uppercase;
+}
+.skills-container article .percentage span {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
 }
