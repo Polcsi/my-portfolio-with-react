@@ -1,0 +1,124 @@
+.contact-page > .mapouter {grid-area: map;}
+.contact-page > .contact-page-form {grid-area: form;}
+.contact-page > .contact-title {grid-area: title;}
+.contact-page {
+    background-color: var(--gray-primary-1);
+    /* padding: 12rem 8rem 5rem 7rem; */
+    padding: 20vh clamp(1.2rem, 6vw, 17rem);
+    color: var(--text-color);
+    display: grid;
+    grid-template-areas: 
+    'title map'
+    'form map';
+    grid-gap: 3rem 8rem;
+    height: 100vh;
+}
+.contact-title h1 {
+    text-transform: capitalize;
+    font-size: clamp(2.6rem, 2.9vw, 3.3rem);
+    font-weight: 500;
+    margin-bottom: .8rem;
+}
+.contact-title p {
+    font-size: clamp(.9rem, 1.1vw, 1.2rem);
+}
+.contact-page-form > .firstname {grid-area: firstname;}
+.contact-page-form > .lastname {grid-area: lastname;}
+.contact-page-form > .email {grid-area: email;}
+.contact-page-form > .town {grid-area: town;}
+.contact-page-form > .message {grid-area: message;}
+.contact-page-form > .submit-btn {grid-area: btn;}
+.contact-page-form {
+    display: grid;
+    grid-template-areas:
+    'firstname lastname'
+    'email town'
+    'message message'
+    'btn btn';
+    grid-gap: 1.5rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+.contact-input {
+    background-color: var(--gray-primary-4);
+    border: none;
+    border-top: 4px solid var(--green-primary);
+    outline: none;
+    padding: 0 1.2rem;
+    width: auto;
+    height: clamp(3.6rem, 4vw, 5rem);
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+    color: var(--green-primary);
+}
+.message {
+    resize: none;
+    padding:  1.2rem;
+    height: 20vh;
+}
+.contact-input::placeholder {
+    color: var(--green-primary);
+}
+.submit-btn {
+    background: var(--green-primary) !important;
+    width: clamp(12.5rem, 15vw, 16.25rem);
+    height: clamp(3.13rem, 4vw, 4.38rem);
+    padding: 0 !important;
+    font-size: clamp(1.1rem, 1.4vw, 1.3rem) !important;
+    border-radius: 5px;
+    transition: all ease .2s;
+}
+.submit-btn:hover {
+    background: var(--green-primary-2) !important;
+}
+.submit-btn:hover {
+    transform: scale(0.97);
+}
+.submit-btn:active {
+    transform: scale(0.92);
+}
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:500px;
+    width:612px;
+    place-self: center;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none !important;
+    height:500px;
+    width:612px;
+}
+@media screen and (max-width: 1480px) {
+    .contact-page {
+        grid-template-areas: 
+    'title title'
+    'form form'
+    'map map';
+    height: auto;
+    padding: 15vh clamp(1.2rem, 6vw, 17rem);
+    }
+}
+@media screen and (max-width: 730px) {
+    .contact-page {
+        grid-template-areas: 
+    'title title'
+    'form form'
+    'map map';
+    padding-bottom: 5vh !important;
+    }
+    .mapouter {
+        display: none;
+    }
+    .contact-page-form {
+    display: grid;
+    grid-template-areas:
+    'firstname firstname'
+    'lastname lastname'
+    'email email'
+    'town town'
+    'message message'
+    'btn btn';
+    grid-gap: 1.5rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    }   
+}

@@ -1,0 +1,40 @@
+import React, { useState } from "react";
+import "../css/footer.css";
+import logo from "../icons/logo.svg";
+import { social } from "../data";
+import { BsFillHeartFill } from "react-icons/bs";
+
+const Footer = () => {
+  return (
+    <footer>
+      <div className="upper-layer">
+        <img src={logo} alt="logo" className="footer-logo" />
+        <div className="footer-socail-icons">
+          {social.map(({ id, url, icon, text }) => {
+            return (
+              <article key={id}>
+                <a title={text} href={url}>
+                  {icon}
+                </a>
+              </article>
+            );
+          })}
+        </div>
+        <div className="creator">
+          <span>
+            <BsFillHeartFill />
+          </span>
+          <span>created by polcsi</span>
+        </div>
+      </div>
+      <div className="down-layer">
+        <span>&copy;</span>
+        <span>2021</span>
+        <span>polcsicode.com</span>
+        <span>all rights reserved</span>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

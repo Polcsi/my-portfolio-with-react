@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Project from "./pages/Project";
 import Error from "./pages/Error";
+import Footer from "./components/Footer";
 
 // import components
 import Navbar from "./components/Navbar";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/projects/project/:id" element={<Project />}></Route>
           <Route path="*" element={<Error />}></Route>
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
