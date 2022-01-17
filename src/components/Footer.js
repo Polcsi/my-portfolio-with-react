@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/footer.css";
 import logo from "../icons/logo.svg";
 import { social } from "../data";
@@ -8,7 +8,9 @@ const Footer = () => {
   return (
     <footer>
       <div className="upper-layer">
-        <img src={logo} alt="logo" className="footer-logo" />
+        <div className="footer-logo">
+          <img src={logo} alt="logo" />
+        </div>
         <div className="footer-socail-icons">
           {social.map(({ id, url, icon, text }) => {
             return (

@@ -13,23 +13,23 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
 }
 .footer-socail-icons article a{
     color: var(--light-gray-primary-1);
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 1.5vw, 1.6rem);
 }
-.footer-logo {
-    width: 60px;
+.footer-logo img{
+    width: 45px;
 }
 .creator span:nth-child(1) {
     color: #C83838;
     vertical-align: middle;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
 }
 .creator {
     color: var(--light-gray-primary-2);
-    font-size: 1.1rem;
+    font-size: clamp(.9rem, 1vw, 1.1rem);
     text-transform: capitalize;
     display: flex;
     gap: .2rem;
@@ -44,7 +44,23 @@ footer {
     gap: .3rem;
     text-transform: capitalize;
 }
+.down-layer span {
+    font-size: clamp(.8rem, 1vw, 1rem);
+}
 .down-layer span:nth-child(3) {
     color: var(--text-color);
     text-transform: lowercase;
+}
+@media screen and (max-width: 730px) {
+    .creator {
+        display: none;
+    }
+    .upper-layer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1.5rem;
+    }
 }
