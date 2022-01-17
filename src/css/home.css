@@ -232,6 +232,8 @@
   display: grid;
   grid-gap: 1.2rem;
   place-self: center;
+}
+.section-header {
   margin-bottom: 5rem;
 }
 .section-header h2 {
@@ -302,4 +304,154 @@
 
 .pricing-section {
   background-color: var(--gray-primary-6);
+}
+.plans {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+.pricing-plan {
+  background-color: var(--gray-primary-4);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.pricing-card-header {
+  background-color: var(--gray-primary-2);
+  padding: 3rem;
+  display: grid;
+  height: clamp(22rem, 25vw , 27rem);
+  place-items: center;
+  color: var(--text-color);
+  border-radius: 20px 20px 0 0;
+}
+.pricing-card-header h3 {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: clamp(1.5rem, 1.5vw, 1.8rem);
+}
+.pricing-card-header h1 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: clamp(5.5rem, 6vw , 6.5rem);
+}
+.pricing-plan-btn {
+  position: relative;
+  display: inline-block;
+  border: 2px solid var(--green-primary) !important;
+  overflow: hidden;
+  transition: all 0.1s linear;
+  background: var(--green-primary) !important;
+  border-radius: 5px;
+  font-size: 1.2rem !important;
+  padding: 13px 45px!important;
+  filter: hue-rotate(0deg);
+  color: white !important;
+  
+}
+.pricing-plan-btn:hover {
+  transform: scale(0.95);
+  border: 2px solid transparent !important;
+  background: transparent !important;
+  color: var(--green-primary) !important;
+  box-shadow: rgba(50, 50, 93, 0.55) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
+}
+.pricing-plan-btn:hover:active {
+  transform: scale(0.91);
+}
+.pricing-plan-btn:hover span {
+  position: absolute;
+  display: block;
+}
+.pricing-plan-btn:hover span:nth-child(1) {
+  filter: hue-rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--green-primary));
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.pricing-plan-btn:hover span:nth-child(2) {
+  filter: hue-rotate(60deg);
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--green-primary));
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.pricing-plan-btn:hover span:nth-child(3) {
+  filter: hue-rotate(120deg);
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(270deg, transparent, var(--green-primary));
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+    height: 3px;
+  }
+  50%, 100% {
+    height: 2px;
+    right: 100%;
+  }
+}
+.pricing-plan-btn:hover span:nth-child(4) {
+  filter: hue-rotate(300deg);
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--green-primary));
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+.pricing-card-details {
+  place-self: center;
+  list-style-image: url("../icons/checkmark_complete.svg");
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+  padding: 3rem 3rem 3rem 7rem;
+  display: grid;
+  gap: clamp(.9rem, 1vw, 1.3rem);
+  justify-content: left;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .pricing-card-details {
+      padding: 2.8rem 2.8rem 2.8rem 5.5rem;
+    }
+    .pricing-card-header {
+      padding: 2rem;
+    }
 }

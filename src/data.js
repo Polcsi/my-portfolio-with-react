@@ -179,3 +179,47 @@ export const achievements = [
     count: 124,
   },
 ];
+export const plans = [
+  {
+    id: 1,
+    name: "simple static site",
+    price: "99",
+    info: [
+      "HTML / CSS",
+      "desktop and mobile support",
+      "no animations",
+      "custom domain",
+      "single page application",
+    ],
+  },
+  {
+    id: 2,
+    name: "static site",
+    price: "120",
+    info: [
+      "HTML / CSS",
+      "full responsive",
+      "simple animations",
+      "custom domain",
+      "multi page application",
+      "custom logo design",
+      "UI & UX design",
+    ],
+  },
+  {
+    id: 3,
+    name: "full functional static site",
+    price: "160",
+    info: [
+      "react",
+      "full responsive",
+      "any animations",
+      "custom domain",
+      "multi page application",
+      "custom logo design",
+      "UI & UX design",
+      "serverless functions",
+      "life service",
+    ],
+  },
+];

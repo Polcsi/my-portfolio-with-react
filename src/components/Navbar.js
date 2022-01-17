@@ -22,6 +22,7 @@ const Navbar = () => {
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
   const navHeaderRef = useRef(null);
+  const progressBarRef = useRef(null);
 
   useEffect(() => {
     linksContainerRef.current.style.height = `${window.innerHeight}px`;
@@ -51,6 +52,14 @@ const Navbar = () => {
   }, [showLinks]);
   window.addEventListener("scroll", function () {
     this.scrollY > 50 ? setScroll(true) : setScroll(false);
+    /* progress bar */
+    let winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    let height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    this.document.getElementById("my-bar").style.width = scrolled + "%";
   });
 
   return (
@@ -95,6 +104,16 @@ const Navbar = () => {
             })}
           </ul>
         </div>
+      </div>
+      <div
+        className={
+          scroll
+            ? "progress-scroll-container show-scroll-container"
+            : "progress-scroll-container"
+        }
+        ref={progressBarRef}
+      >
+        <div className="progress-scroll-bar" id="my-bar"></div>
       </div>
     </nav>
   );
