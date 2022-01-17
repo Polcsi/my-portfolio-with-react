@@ -91,11 +91,11 @@
 @media screen and (max-width: 1480px) {
     .contact-page {
         grid-template-areas: 
-    'title title'
-    'form form'
-    'map map';
-    height: auto;
-    padding: 15vh clamp(1.2rem, 6vw, 17rem);
+        'title title'
+        'form form'
+        'map map';
+        height: auto;
+        padding: 15vh clamp(1.2rem, 6vw, 17rem);
     }
 }
 @media screen and (max-width: 730px) {

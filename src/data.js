@@ -12,7 +12,7 @@ export const links = [
   {
     id: 1,
     type: "route",
-    url: "/home",
+    url: "/",
     text: "home",
   },
   {

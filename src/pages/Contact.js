@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../css/contact.css";
+import Alert from "../components/Alert";
 
 const Contact = () => {
   const [email, setEmail] = useState({
@@ -9,6 +10,15 @@ const Contact = () => {
     town: "",
     message: "",
   });
+  const [alert, setAlert] = useState({
+    show: false,
+    msg: "",
+    type: "",
+  });
+
+  const setAlertHook = (show = false, type = "", msg = "") => {
+    setAlert({ show, type, msg });
+  };
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -19,8 +29,13 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (email.firstname && email.lastname && email.email && email.message) {
+    if (
+      email.firstname &&
+      email.lastname &&
+      email.email &&
+      email.message.length >= 12
+    ) {
+      setAlertHook(true, "success", "message sent!");
       setEmail({
         firstname: "",
         lastname: "",
@@ -28,6 +43,15 @@ const Contact = () => {
         town: "",
         message: "",
       });
+    } else if (
+      email.firstname &&
+      email.lastname &&
+      email.email &&
+      email.message.length < 12
+    ) {
+      setAlertHook(true, "danger", "Message Should Minimum 12 Charchter Long.");
+    } else {
+      setAlertHook(true, "danger", "you must fill all the marked fields!");
     }
   };
 
@@ -41,11 +65,11 @@ const Contact = () => {
         </p>
       </div>
       <form className="contact-page-form" onSubmit={handleSubmit}>
+        {alert.show && <Alert {...alert} setAlertHook={setAlertHook} />}
         <input
           type="text"
           className="contact-input firstname"
           placeholder="First Name*"
-          required
           name="firstname"
           value={email.firstname}
           onChange={handleChange}
@@ -54,7 +78,6 @@ const Contact = () => {
           type="text"
           className="contact-input lastname"
           placeholder="Last Name*"
-          required
           name="lastname"
           value={email.lastname}
           onChange={handleChange}
@@ -63,7 +86,6 @@ const Contact = () => {
           type="email"
           className="contact-input email"
           placeholder="Email*"
-          required
           name="email"
           value={email.email}
           onChange={handleChange}
@@ -79,7 +101,6 @@ const Contact = () => {
         <textarea
           className="contact-input message"
           placeholder="Your Message...*"
-          required
           name="message"
           value={email.message}
           onChange={handleChange}
