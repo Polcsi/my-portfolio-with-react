@@ -2,6 +2,35 @@ import React, { useState } from "react";
 import "../css/contact.css";
 
 const Contact = () => {
+  const [email, setEmail] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    town: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setEmail({ ...email, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (email.firstname && email.lastname && email.email && email.message) {
+      setEmail({
+        firstname: "",
+        lastname: "",
+        email: "",
+        town: "",
+        message: "",
+      });
+    }
+  };
+
   return (
     <div className="contact-page">
       <div className="contact-title">
@@ -11,30 +40,49 @@ const Contact = () => {
           your question and help you. I will get your message in my email inbox.
         </p>
       </div>
-      <form className="contact-page-form">
+      <form className="contact-page-form" onSubmit={handleSubmit}>
         <input
           type="text"
           className="contact-input firstname"
           placeholder="First Name*"
           required
+          name="firstname"
+          value={email.firstname}
+          onChange={handleChange}
         />
         <input
           type="text"
           className="contact-input lastname"
           placeholder="Last Name*"
           required
+          name="lastname"
+          value={email.lastname}
+          onChange={handleChange}
         />
         <input
           type="email"
           className="contact-input email"
           placeholder="Email*"
           required
+          name="email"
+          value={email.email}
+          onChange={handleChange}
         />
-        <input type="text" className="contact-input town" placeholder="Town" />
+        <input
+          type="text"
+          className="contact-input town"
+          placeholder="Town"
+          name="town"
+          value={email.town}
+          onChange={handleChange}
+        />
         <textarea
           className="contact-input message"
           placeholder="Your Message...*"
           required
+          name="message"
+          value={email.message}
+          onChange={handleChange}
         ></textarea>
         <button type="submit" className="btn submit-btn">
           send
