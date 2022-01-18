@@ -14,7 +14,7 @@ const Alert = ({ msg, type, setAlertHook }) => {
     const timeout = setTimeout(() => {
       document.body.style.overflow = "auto";
       removeAlert();
-    }, 4000);
+    }, 5000);
     return () => clearTimeout(timeout);
   });
   return (

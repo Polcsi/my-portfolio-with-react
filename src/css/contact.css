@@ -88,6 +88,20 @@
     height:600px;
     width:612px;
 }
+.loading-submit {
+    width: clamp(1.4rem, 1.7vw, 2rem);
+    height: clamp(1.4rem, 1.7vw, 2rem);
+}
+.disabled-submit-btn {
+    background: var(--green-primary-2) !important;
+}
+.disabled-submit-btn:hover {
+    transform: none !important;
+    cursor: default !important;
+}
+.disabled-input {
+    opacity: 0.6;
+}
 @media screen and (max-width: 1480px) {
     .contact-page {
         grid-template-areas: 
