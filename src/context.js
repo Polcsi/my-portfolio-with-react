@@ -1,13 +1,19 @@
-/* import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
+import { projects } from "./projects_data";
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  return <AppContext.Provider value="hurka">{children}</AppContext.Provider>;
+  const [allProjects, setAllProjects] = useState(projects);
+  return (
+    <AppContext.Provider value={{ allProjects, setAllProjects }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };
 
-export { AppContext, AppProvider }; */
+export { AppContext, AppProvider };

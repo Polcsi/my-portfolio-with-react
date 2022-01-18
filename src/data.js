@@ -41,8 +41,8 @@ export const links = [
   },
   {
     id: 6,
-    type: "route",
-    url: "/projects",
+    type: "scroll",
+    url: "featured-projects",
     text: "projects",
   },
   {
