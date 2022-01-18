@@ -6,9 +6,7 @@ import "./css/index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
