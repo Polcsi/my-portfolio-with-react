@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+/* import React, { useState, useContext, useEffect } from "react";
 
 const AppContext = React.createContext();
 
@@ -10,4 +10,4 @@ export const useGlobalContext = () => {
   return useContext(AppContext);
 };
 
-export { AppContext, AppProvider };
+export { AppContext, AppProvider }; */
