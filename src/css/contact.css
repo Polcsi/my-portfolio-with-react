@@ -84,7 +84,10 @@
 }
 .gmap_canvas {
     overflow:hidden;
-    background:none !important;
+    background:url("../icons/loading-buffering.gif");
+    background-position: center center;
+    background-size: 4rem;
+    background-repeat: no-repeat;
     height:600px;
     width:612px;
 }

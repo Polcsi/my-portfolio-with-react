@@ -40,12 +40,23 @@ const Contact = () => {
     return result;
   };
 
+  const validataEmailAddress = (str) => {
+    const pattern = new RegExp(
+      "[a-zA-Z0-9_\\.\\+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-\\.]+"
+    );
+    if (pattern.test(str)) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
       email.firstname &&
       email.lastname &&
-      email.email &&
+      validataEmailAddress(email.email) &&
       email.message.length >= 12
     ) {
       setIsSent(true);
@@ -83,7 +94,14 @@ const Contact = () => {
     } else if (
       email.firstname &&
       email.lastname &&
-      email.email &&
+      !validataEmailAddress(email.email) &&
+      email.message
+    ) {
+      setAlertHook(true, "danger", "invalid email adress!");
+    } else if (
+      email.firstname &&
+      email.lastname &&
+      validataEmailAddress(email.email) &&
       email.message.length < 12
     ) {
       setAlertHook(true, "danger", "Message Should Minimum 12 Charchter Long.");
@@ -130,7 +148,7 @@ const Contact = () => {
           disabled={isSent && "disabled"}
         />
         <input
-          type="email"
+          type="text"
           className={
             isSent
               ? "contact-input email disabled-input"
