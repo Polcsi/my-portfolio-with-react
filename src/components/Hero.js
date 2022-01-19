@@ -70,9 +70,9 @@ const Hero = () => {
               data-rotate='[ "web developer", "UX & UI Designer", "frontend developer", "backend developer", "IT engineer" ]'
             ></span>
           </h1>
-          <span className="btn contact-btn">
-            <Link to="/contact"></Link>
-          </span>
+          <Link className="btn white-border-btn" to="/contact">
+            contact me
+          </Link>
         </div>
       </div>
       <img className="hero-scroll-icon" src={scrollIcon} alt="scroll-icon" />

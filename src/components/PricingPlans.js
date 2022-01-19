@@ -12,7 +12,7 @@ const PricingPlans = () => {
             <div className="pricing-card-header">
               <h3>{name}</h3>
               <h1>€{price}</h1>
-              <Link to="/contact" className="pricing-plan-btn btn">
+              <Link to="/contact" className="primary-green-btn btn">
                 <span></span>
                 <span></span>
                 <span></span>

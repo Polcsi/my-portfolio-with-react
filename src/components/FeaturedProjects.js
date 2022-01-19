@@ -15,7 +15,11 @@ const FeaturedProjects = () => {
         </p>
       </div>
       <div className="view-all-btn-container">
-        <Link to="/projects" className="btn view-all-btn">
+        <Link to="/projects" className="btn  primary-green-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           view all
         </Link>
       </div>
@@ -24,8 +28,16 @@ const FeaturedProjects = () => {
       </div>
       <div className="work-together-card">
         <h1>let's work together on your next project</h1>
-        <p></p>
-        <Link className="btn" to="/contact">
+        <p className="work-together-card-txt">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea
+        </p>
+        <Link
+          className="btn white-border-btn work-together-card-btn"
+          to="/contact"
+        >
           contact
         </Link>
       </div>
