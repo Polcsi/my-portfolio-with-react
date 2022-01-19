@@ -1,0 +1,56 @@
+.project-page {
+    background-color: var(--gray-primary-1);
+    padding-bottom: 0 !important;
+    padding-top: 18vh !important;
+}
+.image-banner img{
+    /* box-shadow: var(--green-primary-3-shadow-4) 5px 5px, var(--green-primary-3-shadow-3) 10px 10px, var(--green-primary-3-shadow-2) 15px 15px, var(--green-primary-3-shadow-1) 20px 20px, var(--green-primary-3-shadow-1) 25px 25px; */
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 22px 70px 4px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.project-info-section {
+    background-color: var(--gray-primary-3);
+    margin: 0 clamp(.2rem, 3vw, 4rem);
+    margin-top: 5rem;
+    padding: 2rem clamp(1.3rem, 3vw, 4rem)3rem clamp(1.3rem, 3vw, 4rem);
+    color: var(--text-color);
+}
+.grid-info{display: grid;}
+.project-info-section h1 {
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: clamp(2.5rem, 3vw, 3.4rem);
+    padding-bottom: 1.5rem;
+}
+.project-info-section h1::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 20%;
+    height: 3px;
+    background-color: white;
+}
+.project-info-section p, .project-info-section span {
+    font-size: clamp(.9rem, 1vw, 1.2rem);
+}
+.project-info-section p {
+    padding: 3rem 0;
+    text-align: justify;
+}
+.project-info-section span {
+    text-align: right;
+}
+.project-info-section a {
+    color: var(--green-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
+    transition: all ease .2s;
+}
+.project-info-section a:hover {
+    color: var(--green-primary-3);
+}

@@ -5,8 +5,13 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [allProjects, setAllProjects] = useState(projects);
+
+  const searchProject = (id) => {
+    return allProjects.filter((item) => item.id === parseInt(id));
+  };
+
   return (
-    <AppContext.Provider value={{ allProjects, setAllProjects }}>
+    <AppContext.Provider value={{ allProjects, setAllProjects, searchProject }}>
       {children}
     </AppContext.Provider>
   );

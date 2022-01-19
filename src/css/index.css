@@ -31,6 +31,11 @@ body {
     --green-primary: #43BE98;
     --green-primary-2: #266465;
     --green-primary-3: #38997a;
+    --green-primary-3-shadow-1: rgba(56, 153, 122, 0.1);
+    --green-primary-3-shadow-2: rgba(56, 153, 122, 0.2);
+    --green-primary-3-shadow-3: rgba(56, 153, 122, 0.3);
+    --green-primary-3-shadow-4: rgba(56, 153, 122, 0.4);
+    --green-primary-3-shadow-5: rgba(56, 153, 122, 0.5);
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
   --clr-primary-2: hsl(205, 77%, 27%);
@@ -74,7 +79,7 @@ body {
 .section {
   width: 100%;
   height: auto;
-  padding: 7vw clamp(1.2rem, 6vw, 17rem);
+  padding: 13vh clamp(1.2rem, 6vw, 17rem);
 }
 
 .btn {

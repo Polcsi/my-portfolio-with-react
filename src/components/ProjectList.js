@@ -7,11 +7,11 @@ const ProjectList = ({ amount }) => {
   const { allProjects } = useGlobalContext();
 
   return allProjects.slice(0, amount).map((project) => {
-    const { id, title, image } = project;
+    const { id, title, cover } = project;
     return (
       <article key={id}>
         <div className="project-header">
-          <img src={image} alt={`${title}`} />
+          <img src={cover} alt={`${title}`} />
         </div>
         <div className="project-body">
           <h1>{title}</h1>
