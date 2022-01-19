@@ -5,6 +5,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  height: 100vh;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  overflow: auto;
+  overscroll-behavior: none;
+}
 
 :root {
     --text-color: #fff;
@@ -59,12 +68,6 @@
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  display: block;
-  overflow: auto;
 }
 
 .btn {

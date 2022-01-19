@@ -3,6 +3,7 @@ nav {
     font-family: 'Poppins';
     position: fixed;
     top: 0;
+    backface-visibility: hidden;
     width: 100vw;
     z-index: 1000;
 }
@@ -86,6 +87,7 @@ a {
     color: var(--clr-primary-7);
   }
   .nav-center {
+    backface-visibility: hidden;
     position: relative;
     transition: all .3s ease;
   }
@@ -118,6 +120,7 @@ a {
     padding: 1.5rem 1rem 1rem 1rem !important;
   }
   .nav-center {
+    backface-visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
