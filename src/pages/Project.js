@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../context";
 import "../css/project.css";
+import Navbar from "../components/Navbar";
 
 const Project = () => {
   const { searchProject } = useGlobalContext();

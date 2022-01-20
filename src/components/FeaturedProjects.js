@@ -4,10 +4,7 @@ import ProjectList from "./ProjectList";
 
 const FeaturedProjects = () => {
   return (
-    <section
-      className="featured-projects-section section"
-      name="featured-projects"
-    >
+    <section className="featured-projects-section section" name="projects">
       <div className="featured-projects-header">
         <h1>featured projects</h1>
         <p>
@@ -24,7 +21,7 @@ const FeaturedProjects = () => {
         </Link>
       </div>
       <div className="featured-project-list">
-        <ProjectList amount={6} />
+        <ProjectList amount={6} filter={false} />
       </div>
       <div className="work-together-card">
         <h1>let's work together on your next project</h1>

@@ -16,7 +16,7 @@ function debounce(fn, ms) {
   };
 }
 
-const Navbar = () => {
+const Navbar = ({ links }) => {
   const [showLinks, setShowLinks] = useState(false);
   const [scroll, setScroll] = useState(false);
   const linksContainerRef = useRef(null);
@@ -84,7 +84,7 @@ const Navbar = () => {
             </button>
           </div>
           <ul className="links" ref={linksRef}>
-            <NavLinks setShowLinks={setShowLinks} />
+            <NavLinks setShowLinks={setShowLinks} links={links} />
           </ul>
           <ul className="social-icons">
             {social.map((item) => {

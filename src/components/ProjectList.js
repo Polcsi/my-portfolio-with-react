@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 import { FaArrowRight } from "react-icons/fa";
 
-const ProjectList = ({ amount }) => {
-  const { allProjects } = useGlobalContext();
+const ProjectList = ({ amount, filter }) => {
+  const { allProjects, projects } = useGlobalContext();
 
-  return allProjects.slice(0, amount).map((project) => {
+  return (filter ? allProjects : projects).slice(0, amount).map((project) => {
     const { id, title, cover } = project;
     return (
       <article key={id}>

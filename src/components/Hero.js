@@ -57,7 +57,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero-container">
+    <div className="hero-container" name="home">
       <div className="hero-overlay"></div>
       <div className="hero-grid">
         <div className="hero-header">

@@ -3,6 +3,7 @@ import "../css/contact.css";
 import Alert from "../components/Alert";
 import axios from "axios";
 import loadingIcon from "../icons/loading-buffering.gif";
+import Navbar from "../components/Navbar";
 
 const Contact = () => {
   const [email, setEmail] = useState({
@@ -112,6 +113,13 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      <Navbar
+        links={[
+          { title: "home", type: "route" },
+          { title: "projects", type: "route", url: "/projects" },
+          { title: "contact", type: "route", url: "/contact" },
+        ]}
+      />
       <div className="contact-title">
         <h1>contact me</h1>
         <p>

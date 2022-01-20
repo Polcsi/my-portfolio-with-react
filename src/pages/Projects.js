@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "../context";
 import "../css/projects.css";
 import ProjectList from "../components/ProjectList";
+import Navbar from "../components/Navbar";
 
 const Projects = () => {
-  const { allProjects, categories, filterProjects, amount, setAmount } =
-    useGlobalContext();
-  const [active, setActive] = useState("all");
+  const {
+    allProjects,
+    categories,
+    filterProjects,
+    amount,
+    setAmount,
+    active,
+    setActive,
+  } = useGlobalContext();
 
   return (
     <section className="projects-page">
@@ -40,7 +47,7 @@ const Projects = () => {
         </div>
       </div>
       <div className="featured-project-list">
-        <ProjectList amount={amount} />
+        <ProjectList amount={amount} filter={true} />
       </div>
       <div className="load-more-container">
         {" "}

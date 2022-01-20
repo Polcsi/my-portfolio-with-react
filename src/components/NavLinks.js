@@ -1,22 +1,21 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
-import { links } from "../data";
 
-const NavLinks = ({ setShowLinks }) => {
-  return links.map((link) => {
-    const { id, url, text, type } = link;
+const NavLinks = ({ setShowLinks, links }) => {
+  return links.map((link, index) => {
+    const { url, title, type } = link;
     if (type === "route") {
       return (
-        <li key={id} onClick={() => setShowLinks(false)}>
-          <Link to={url}>{text}</Link>
+        <li key={index} onClick={() => setShowLinks(false)}>
+          <Link to={url}>{title}</Link>
         </li>
       );
     } else {
       return (
-        <li key={id}>
+        <li key={index}>
           <ScrollLink
-            to={url}
+            to={title}
             spy={true}
             smooth={true}
             offset={-50}
@@ -26,7 +25,7 @@ const NavLinks = ({ setShowLinks }) => {
             onClick={() => setShowLinks(false)}
             style={{ cursor: "pointer" }}
           >
-            {text}
+            {title}
           </ScrollLink>
         </li>
       );

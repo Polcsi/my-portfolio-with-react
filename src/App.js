@@ -8,7 +8,6 @@ import Project from "./pages/Project";
 import Error from "./pages/Error";
 
 // import components
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -17,7 +16,6 @@ function App() {
     <div>
       <Router>
         <ScrollToTop>
-          <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/contact" element={<Contact />}></Route>

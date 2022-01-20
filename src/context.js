@@ -6,6 +6,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [allProjects, setAllProjects] = useState(projects);
   const [amount, setAmount] = useState(9);
+  const [active, setActive] = useState("all");
   const allCategories = [
     "all",
     ...new Set(allProjects.map((category) => category.category)),
@@ -38,6 +39,9 @@ const AppProvider = ({ children }) => {
         filterProjects,
         amount,
         setAmount,
+        active,
+        setActive,
+        projects,
       }}
     >
       {children}

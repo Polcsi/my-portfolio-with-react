@@ -51,6 +51,12 @@ export const links = [
     url: "/contact",
     text: "contact",
   },
+  {
+    id: 8,
+    type: "scroll",
+    url: "home",
+    text: "home",
+  },
 ];
 
 export const social = [
