@@ -86,7 +86,6 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   background: transparent;
-  border: none;
   padding: 20px;
   font-size: 1.3rem;
   color: white;
@@ -94,8 +93,17 @@ body {
   letter-spacing: 2px;
   text-align: center;
 }
+.dark-border {
+  border: 3px solid var(--gray-primary-5) !important;
+  color: var(--green-primary-2);
+}
+.dark-border:hover {
+  background: var(--gray-primary-5) !important;
+  color: var(--green-primary);
+  transform: scale(0.98);
+}
 .white-border-btn {
-  border: 3px solid white !important;
+  border: 3px solid white;
   padding: clamp(.7rem, 1vw, 1rem) 2.7rem !important;
   font-size: clamp(1rem, 1.1vw, 1.2rem) !important;
   transform: scale(1);
