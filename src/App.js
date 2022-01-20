@@ -6,24 +6,27 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Project from "./pages/Project";
 import Error from "./pages/Error";
-import Footer from "./components/Footer";
 
 // import components
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div>
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/projects" element={<Projects />}></Route>
-          <Route path="/projects/project/:id" element={<Project />}></Route>
-          <Route path="*" element={<Error />}></Route>
-        </Routes>
-        <Footer />
+        <ScrollToTop>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/projects" element={<Projects />}></Route>
+            <Route path="/projects/project/:id" element={<Project />}></Route>
+            <Route path="*" element={<Error />}></Route>
+          </Routes>
+          <Footer />
+        </ScrollToTop>
       </Router>
     </div>
   );
