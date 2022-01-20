@@ -10,7 +10,7 @@ export const projects = [
   {
     id: 1,
     title: "glassmorphism form design",
-    category: "design",
+    category: "program",
     cover: glass,
     url: "https://sign-up4525.netlify.app",
     date: "2022.01.01.",
@@ -19,7 +19,7 @@ export const projects = [
   {
     id: 2,
     title: "sky simultating",
-    category: "product",
+    category: "testing",
     cover: sky,
     url: "https://day-night-sky.netlify.app",
     date: "2022.01.01.",
@@ -28,7 +28,7 @@ export const projects = [
   {
     id: 3,
     title: "UI & UX website design",
-    category: "design",
+    category: "UI&UX design",
     cover: uiuxdesign,
     url: "",
     date: "2022.01.01.",
@@ -37,7 +37,7 @@ export const projects = [
   {
     id: 4,
     title: "UI hero section design",
-    category: "design",
+    category: "UI&UX design",
     cover: uidesign1,
     url: "",
     date: "2022.01.01.",
@@ -55,7 +55,7 @@ export const projects = [
   {
     id: 6,
     title: "sending email with vanilla js",
-    category: "test",
+    category: "testing",
     cover: semail,
     url: "https://sending-email.netlify.app",
     date: "2022.01.01.",
@@ -73,7 +73,7 @@ export const projects = [
   {
     id: 9,
     title: "sky simultating",
-    category: "product",
+    category: "testing",
     cover: sky,
     url: "",
     date: "2022.01.01.",
@@ -82,7 +82,16 @@ export const projects = [
   {
     id: 10,
     title: "sending email with vanilla js",
-    category: "test",
+    category: "testing",
+    cover: semail,
+    url: "",
+    date: "2022.01.01.",
+    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
+  },
+  {
+    id: 11,
+    title: "sending email with vanilla js",
+    category: "testing",
     cover: semail,
     url: "",
     date: "2022.01.01.",
