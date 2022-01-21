@@ -1,5 +1,14 @@
 import React from "react";
-import { FaGithub, FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import {
+  FaGithub,
+  FaFacebook,
+  FaInstagram,
+  FaTiktok,
+  FaTwitter,
+  FaCodepen,
+} from "react-icons/fa";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { HiOutlineMail } from "react-icons/hi";
 import addressInfoIcon from "./icons/address-info.svg";
 import profileInfoIcon from "./icons/profile-info.svg";
 import hobbiesInfoIcon from "./icons/hobbies-info.svg";
@@ -32,6 +41,56 @@ export const social = [
     url: "https://www.tiktok.com/@polcsi.code?lang=en&is_copy_url=1&is_from_webapp=v1",
     icon: <FaTiktok />,
     text: "@polcsi.code",
+  },
+];
+export const allContactsOportunity = [
+  {
+    id: 1,
+    url: "https://www.facebook.com/profile.php?id=100008194816126",
+    icon: <FaFacebook />,
+    text: "Bence Pollák",
+  },
+  {
+    id: 2,
+    url: "https://www.instagram.com/polcsi01/",
+    icon: <FaInstagram />,
+    text: "@polcsi01",
+  },
+  {
+    id: 3,
+    url: "https://github.com/Polcsi",
+    icon: <FaGithub />,
+    text: "@Polcsi",
+  },
+  {
+    id: 4,
+    url: "https://www.tiktok.com/@polcsi.code?lang=en&is_copy_url=1&is_from_webapp=v1",
+    icon: <FaTiktok />,
+    text: "@polcsi.code",
+  },
+  {
+    id: 5,
+    url: "https://twitter.com/Polcsi12",
+    icon: <FaTwitter />,
+    text: "@Polcsi12",
+  },
+  {
+    id: 6,
+    url: "https://codepen.io/polcsi",
+    icon: <FaCodepen />,
+    text: "@polcsi",
+  },
+  {
+    id: 7,
+    url: "",
+    icon: <BsFillTelephoneFill />,
+    text: "+36/30 783 8220",
+  },
+  {
+    id: 8,
+    url: "",
+    icon: <HiOutlineMail />,
+    text: "pollakbence12@gmail.com",
   },
 ];
 export const info = [
