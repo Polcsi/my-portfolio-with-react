@@ -48,7 +48,7 @@ export const projects = [
     title: "custom sliders with js",
     category: "program",
     cover: customslider,
-    url: "",
+    url: "https://codepen.io/polcsi/pen/oNGKNQx",
     date: "2022.01.01.",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
   },
