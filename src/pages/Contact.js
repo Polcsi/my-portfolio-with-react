@@ -115,9 +115,9 @@ const Contact = () => {
     <div className="contact-page">
       <Navbar
         links={[
-          { title: "home", type: "route" },
-          { title: "projects", type: "route", url: "/projects" },
-          { title: "contact", type: "route", url: "/contact" },
+          { title: "home", type: "route", url: "/", active: false },
+          { title: "projects", type: "route", url: "/projects", active: false },
+          { title: "contact", type: "route", url: "/contact", active: true },
         ]}
       />
       <div className="contact-title">

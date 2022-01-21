@@ -379,6 +379,7 @@
   color: var(--green-primary);
   font-weight: 600;
   font-size: 1.1rem;
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;

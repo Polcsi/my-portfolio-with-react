@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/error.css";
+import Navbar from "../components/Navbar";
 
 const Error = () => {
   return (
     <section className="error-page">
+      <Navbar links={[]} />
       <div className="error-background-circle"></div>
       <div className="error-container">
         <div className="error-title">

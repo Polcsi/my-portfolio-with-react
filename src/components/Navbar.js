@@ -1,55 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import logo from "../icons/logo.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { social } from "../data";
 import "../css/nav.css";
 import NavLinks from "../components/NavLinks";
-
-function debounce(fn, ms) {
-  let timer;
-  return (_) => {
-    clearTimeout(timer);
-    timer = setTimeout((_) => {
-      timer = null;
-      fn.apply(this, arguments);
-    }, ms);
-  };
-}
+import { Link } from "react-router-dom";
 
 const Navbar = ({ links }) => {
   const [showLinks, setShowLinks] = useState(false);
   const [scroll, setScroll] = useState(false);
-  const linksContainerRef = useRef(null);
-  const linksRef = useRef(null);
-  const navHeaderRef = useRef(null);
-  const progressBarRef = useRef(null);
 
-  useEffect(() => {
-    linksContainerRef.current.style.height = `${window.innerHeight}px`;
-    if (showLinks) {
-      linksContainerRef.current.style.left = "0%";
-      document.body.style.overflow = "hidden";
-    } else {
-      linksContainerRef.current.style.left = "-110%";
-      document.body.style.overflow = "auto";
-    }
-  }, [showLinks]);
-
-  useEffect(() => {
-    const debouncedWindowResize = debounce(function handleResize() {
-      linksContainerRef.current.style.height = `${window.innerHeight}px`;
-      if (showLinks && window.innerWidth >= 800) {
-        document.body.style.overflow = "auto";
-      } else if (showLinks && window.innerWidth <= 800) {
-        document.body.style.overflow = "hidden";
-      }
-    }, 1000);
-
-    window.addEventListener("resize", debouncedWindowResize);
-    return () => {
-      window.removeEventListener("resize", debouncedWindowResize);
-    };
-  }, [showLinks]);
   window.addEventListener("scroll", function () {
     this.scrollY > 50 ? setScroll(true) : setScroll(false);
     /* progress bar */
@@ -62,38 +22,47 @@ const Navbar = ({ links }) => {
     this.document.getElementById("my-bar").style.width = scrolled + "%";
   });
 
+  const handlingEvents = () => {
+    let classes = "navbar";
+    if (scroll) {
+      classes += " sticky";
+    }
+    if (showLinks) {
+      classes += " show";
+      document.body.classList.add("disabledScroll");
+    } else {
+      document.body.classList.remove("disabledScroll");
+    }
+    return classes;
+  };
+
   return (
-    <nav>
-      <div className={scroll ? `nav-center nav-sticky` : "nav-center"}>
-        <div className="nav-header" ref={navHeaderRef}>
-          <img src={logo} alt="logo" className="logo" />
-          <button className="nav-toggle" onClick={() => setShowLinks(true)}>
-            <FaBars />
-          </button>
+    <nav className={handlingEvents()}>
+      <div className="content">
+        <div className="logo">
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
-        <div className="links-container" ref={linksContainerRef}>
-          <div className="nav-header mobile-nav">
-            <div className="logo">
-              <img src={logo} alt="logo" className="logo" />
-            </div>
-            <button
-              className="nav-toggle close-nav-btn"
-              onClick={() => setShowLinks(false)}
-            >
-              <FaTimes />
-            </button>
+        <ul className="menu-list">
+          <div className="sidebar-logo logo">
+            <img src={logo} alt="logo" />
           </div>
-          <ul className="links" ref={linksRef}>
-            <NavLinks setShowLinks={setShowLinks} links={links} />
-          </ul>
-          <ul className="social-icons">
-            {social.map((item) => {
-              const { id, url, icon } = item;
+          <div
+            className={
+              showLinks ? "icon cancel-btn show" : "icon cancel-btn hide"
+            }
+          >
+            <FaTimes onClick={() => setShowLinks(false)} />
+          </div>
+          <NavLinks setShowLinks={setShowLinks} links={links} />
+          <ul className="social-icons-nav">
+            {social.map(({ id, url, icon, text }) => {
               return (
                 <li key={id}>
                   <a
-                    className="icon"
                     href={url}
+                    title={text}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -103,6 +72,11 @@ const Navbar = ({ links }) => {
               );
             })}
           </ul>
+        </ul>
+        <div
+          className={showLinks ? "icon menu-btn hide" : "icon menu-btn show"}
+        >
+          <FaBars onClick={() => setShowLinks(true)} />
         </div>
       </div>
       <div
@@ -111,7 +85,6 @@ const Navbar = ({ links }) => {
             ? "progress-scroll-container show-scroll-container"
             : "progress-scroll-container"
         }
-        ref={progressBarRef}
       >
         <div className="progress-scroll-bar" id="my-bar"></div>
       </div>

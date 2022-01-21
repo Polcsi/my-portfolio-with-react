@@ -17,6 +17,13 @@ const Projects = () => {
 
   return (
     <section className="projects-page">
+      <Navbar
+        links={[
+          { title: "home", type: "route", url: "/", active: false },
+          { title: "projects", type: "route", url: "/projects", active: true },
+          { title: "contact", type: "route", url: "/contact", active: false },
+        ]}
+      />
       <div className="projects-page-header">
         <div className="projects-page-header-title">
           <h1>all projects</h1>

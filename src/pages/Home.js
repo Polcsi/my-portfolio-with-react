@@ -12,13 +12,13 @@ const Home = () => {
     <>
       <Navbar
         links={[
-          { title: "home", type: "scroll" },
-          { title: "about", type: "scroll" },
-          { title: "skills", type: "scroll" },
-          { title: "services", type: "scroll" },
-          { title: "pricing", type: "scroll" },
-          { title: "projects", type: "scroll" },
-          { title: "contact", type: "route", url: "/contact" },
+          { title: "home", type: "scroll", active: false },
+          { title: "about", type: "scroll", active: false },
+          { title: "skills", type: "scroll", active: false },
+          { title: "services", type: "scroll", active: false },
+          { title: "pricing", type: "scroll", active: false },
+          { title: "projects", type: "scroll", active: false },
+          { title: "contact", type: "route", url: "/contact", active: false },
         ]}
       />
       <Hero />

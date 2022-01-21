@@ -8,57 +8,6 @@ import codeIcon from "./icons/code.svg";
 import loudSpeakerIcon from "./icons/loud_speaker.svg";
 import peopleIcon from "./icons/People.svg";
 
-export const links = [
-  {
-    id: 1,
-    type: "route",
-    url: "/",
-    text: "home",
-  },
-  {
-    id: 2,
-    type: "scroll",
-    url: "about",
-    text: "about",
-  },
-  {
-    id: 3,
-    type: "scroll",
-    url: "skills",
-    text: "skills",
-  },
-  {
-    id: 4,
-    type: "scroll",
-    url: "services",
-    text: "services",
-  },
-  {
-    id: 5,
-    type: "scroll",
-    url: "pricing",
-    text: "pricing",
-  },
-  {
-    id: 6,
-    type: "scroll",
-    url: "featured-projects",
-    text: "projects",
-  },
-  {
-    id: 7,
-    type: "route",
-    url: "/contact",
-    text: "contact",
-  },
-  {
-    id: 8,
-    type: "scroll",
-    url: "home",
-    text: "home",
-  },
-];
-
 export const social = [
   {
     id: 1,

@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 
 const NavLinks = ({ setShowLinks, links }) => {
   return links.map((link, index) => {
-    const { url, title, type } = link;
+    const { url, title, type, active } = link;
     if (type === "route") {
       return (
         <li key={index} onClick={() => setShowLinks(false)}>
-          <Link to={url}>{title}</Link>
+          <Link className={active ? "active-link" : ""} to={url}>
+            {title}
+          </Link>
         </li>
       );
     } else {
