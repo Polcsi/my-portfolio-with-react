@@ -6,6 +6,7 @@ import Services from "../components/Services";
 import Pricing from "../components/Pricing";
 import FeaturedProjects from "../components/FeaturedProjects";
 import Navbar from "../components/Navbar";
+import Contact from "../components/Contact";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       <Services />
       <Pricing />
       <FeaturedProjects />
+      <Contact />
     </>
   );
 };

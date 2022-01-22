@@ -454,3 +454,98 @@
   }
   .featured-projects-header p{text-align: center;}
 }
+
+/* Contact section */
+
+.contact-section {
+  background-color: var(--gray-primary-3);
+  display: grid;
+  justify-content: center;
+}
+.contact-section .section-header {
+  place-self: center;
+  display: grid;
+}
+.contact-section .section-header p {
+  place-self: center;
+  margin-top: 2rem;
+  font-size: clamp(.9rem, 1vw, 1.2rem);
+  color: var(--text-color);
+  text-align: center;
+  text-transform: capitalize;
+  max-width: 750px;
+  width: 100%;
+}
+.contact-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+}
+.contact-cards > article {
+  color: var(--text-color);
+  background-color: var(--gray-primary-2);
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1.5rem;
+  width: 300px;
+}
+.contact-cards article {
+  color: var(--text-color);
+  background-color: var(--gray-primary-2);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.8rem;
+  text-align: center;
+  padding: 1.5rem 1.7rem;
+  width: auto;
+}
+.contact-cards article svg {
+  font-size: clamp(1.6rem, 1.7vw, 2rem);
+}
+.contact-cards article p {
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+}
+.mini-alert {
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 1.5rem 2rem;
+  background: white;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  .mini-alert {
+    justify-content: center;
+    width: 95%;
+  }
+}
+.mini-alert p {
+  text-transform: capitalize;
+  font-size: clamp(.9rem, 1vw, 1.2rem);
+  text-align: center;
+}
+.mini-alert svg {
+  font-size: clamp(1.7rem, 1.9vw, 2rem);
+  color: var(--green-primary);
+}
+.contact-section a {
+  margin-top: 2.5rem;
+  place-self: center;
+  border: 3px solid var(--green-primary);
+  color: var(--green-primary);
+}
+.contact-section a:hover {
+  background: var(--green-primary);
+  color: white;
+}
