@@ -14,7 +14,8 @@ const Contact = () => {
         <p>
           Feel free to get in touch with me with anything related to me or you
           can just say hi. If you have questions or suggestions, please contact
-          me on below the platforms. You can click to cards to copy the url.
+          me on below the platforms. You can click to cards to copy the url or
+          send me a message from contact page.
         </p>
       </div>
       <div className="contact-cards">

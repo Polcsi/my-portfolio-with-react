@@ -473,7 +473,7 @@
   color: var(--text-color);
   text-align: center;
   text-transform: capitalize;
-  max-width: 750px;
+  max-width: 900px;
   width: 100%;
 }
 .contact-cards {
