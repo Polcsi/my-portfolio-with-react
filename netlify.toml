@@ -1,8 +1,8 @@
 [[redirects]]
-  from = "/*"
+  from = "/contact"
   to = "/error"
   status = 404
-  
+
 [build]
     functions = "functions/"
     command = "npm run build"
