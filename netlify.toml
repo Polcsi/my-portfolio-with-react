@@ -1,7 +1,13 @@
 [[redirects]]
-  from = "/contact"
+  from = "/*"
   to = "/error"
   status = 404
+
+[[redirects]]
+  from = "/"
+  to = "/contact"
+  status = 301
+  force = false
 
 [build]
     functions = "functions/"
