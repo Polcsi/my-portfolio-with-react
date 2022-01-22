@@ -22,6 +22,7 @@ function App() {
             <Route path="/projects" element={<Projects />}></Route>
             <Route path="/projects/project/:id" element={<Project />}></Route>
             <Route path="/error" element={<Error />}></Route>
+            <Route path="/*" element={<Error />}></Route>
           </Routes>
           <Footer />
         </ScrollToTop>
