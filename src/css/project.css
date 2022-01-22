@@ -48,6 +48,7 @@
     color: var(--green-primary);
     text-transform: uppercase;
     font-weight: 600;
+    text-decoration: none;
     font-size: clamp(1rem, 1.2vw, 1.3rem);
     transition: all ease .2s;
 }
