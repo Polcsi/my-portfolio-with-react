@@ -32,7 +32,9 @@
 }
 .categories {
     display: flex;
-    justify-content: center;    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 .triangle-object {
