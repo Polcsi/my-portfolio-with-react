@@ -26,7 +26,7 @@
   gap: 2rem;
 }
 .logo img {
-  width: clamp(50px, 5vw, 70px );
+  width: clamp(40px, 5vw, 70px );
 }
 .menu-list li{
     list-style: none;
@@ -66,7 +66,7 @@
 }
 .icon {
     color: #fff;
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 1.4vw, 1.6rem);
     cursor: pointer;
     display: none;
 }
@@ -74,7 +74,7 @@
     position: absolute;
     right: 30px;
     top: 20px;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
 }
 .social-icons-nav {display: none;}
 .sidebar-logo {display: none;}
@@ -87,23 +87,23 @@
       padding: 2rem 1rem 1rem 1rem;
     }
     .navbar.sticky{
-      padding: 1rem 1rem 1.2rem 1rem !important;
+      padding: .8rem .9rem 1rem .9rem !important;
     }
-        .menu-list li a:hover::before {
+    .menu-list li a:hover::before {
       transform: scaleX(0);
     }
     .icon{
-        display: block;
+      display: block;
     }
     .icon.hide{
-        display: none;
+      display: none;
     }
     .navbar .menu-list{
         position: fixed;
         z-index: 1001;
         top: 0;
         left: -100%;
-        height: 100vh;
+        height: 100%;
         width: 100%;
         max-width: 500px;
         background: #222;
@@ -112,7 +112,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-top: 40px 0;
+        padding-top: 0vh;
         text-align: center;
         transition: all 0.3s ease;
     }
@@ -126,7 +126,7 @@
         left: 0%;
     }
     .navbar .menu-list li{
-        margin-top: 45px;
+      margin-top: 25px;
     }
     .navbar .menu-list li a{
         font-size: 1.2rem;

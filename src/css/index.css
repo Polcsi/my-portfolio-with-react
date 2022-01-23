@@ -109,7 +109,7 @@ body {
 .white-border-btn {
   border: 3px solid white;
   padding: clamp(.7rem, 1vw, 1rem) 2.7rem !important;
-  font-size: clamp(1rem, 1.1vw, 1.2rem) !important;
+  font-size: clamp(.8rem, 1vw, 1.2rem) !important;
   transform: scale(1);
   transition: all ease .2s;
 }
@@ -129,8 +129,8 @@ body {
   transition: all 0.1s linear;
   background: var(--green-primary) !important;
   border-radius: 5px;
-  font-size: 1.2rem !important;
-  padding: 13px 45px!important;
+  font-size: clamp(.8rem, 1vw, 1.2rem) !important;
+  padding: clamp(10px, 1.6vw ,13px) clamp(35px, 6vw, 45px) !important;
   filter: hue-rotate(0deg);
   color: white !important;
   
