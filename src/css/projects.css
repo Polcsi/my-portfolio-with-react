@@ -4,10 +4,16 @@
     background-color: var(--gray-primary-1);
     width: 100%;
     height: auto;
-    padding: 13vh clamp(1.2rem, 6vw, 17rem);
-    padding-top: 18vh !important;
+    padding: 13vh 0;
+    padding-top: 15vh !important;
+
+}
+.projects-page-container {
     display: grid;
     gap: 4rem;
+    width: 95%;
+    max-width: 1700px;
+    margin: auto;
 }
 .projects-page-header {
     display: flex;
@@ -16,12 +22,12 @@
 }
 .projects-page-header-title {color: white;}
 .projects-page-header-title h1{
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
     text-transform: uppercase;
     font-weight: 500;
 }
 .projects-page-header-title p{
-    font-size: 1.1rem;
+    font-size: clamp(.8rem, 1.3vw, 1.1rem);
     text-transform: capitalize;
 }
 .categories {
@@ -47,11 +53,11 @@
 .category-btn {
     border: 2px solid var(--green-primary) !important;
     color: var(--green-primary);
-    font-size: 1.3rem;
+    font-size: clamp(.9rem, 1.1vw, 1.3rem);
     background: none;
     text-transform: uppercase;
     transition: all ease .2s;
-    height: 50px;
+    height: clamp(40px, 3.35vw, 50px);
     width: auto;
     padding: 0 1.5rem;
     border-radius: 30px;
@@ -62,4 +68,13 @@
 }
 .load-more-container {
     place-self: center;
+}
+@media screen and (max-width: 1400px) {
+    .projects-page-header {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .projects-page-header-title {
+        text-align: center;
+    }
 }

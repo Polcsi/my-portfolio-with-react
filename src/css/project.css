@@ -1,7 +1,12 @@
 .project-page {
     background-color: var(--gray-primary-1);
     padding-bottom: 0 !important;
-    padding-top: 18vh !important;
+    padding-top: 15vh !important;
+}
+.project-page-container {
+    width: 95%;
+    max-width: 1700px;
+    margin: auto;
 }
 .image-banner img{
     /* box-shadow: var(--green-primary-3-shadow-4) 5px 5px, var(--green-primary-3-shadow-3) 10px 10px, var(--green-primary-3-shadow-2) 15px 15px, var(--green-primary-3-shadow-1) 20px 20px, var(--green-primary-3-shadow-1) 25px 25px; */
@@ -9,6 +14,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    background-image: url("../icons/loading-buffering.gif");
 }
 .project-info-section {
     background-color: var(--gray-primary-3);
@@ -54,4 +60,22 @@
 }
 .project-info-section a:hover {
     color: var(--green-primary-3);
+}
+@media screen and (max-width: 768px) {
+    .project-info-section {
+        margin: 0 0;
+        margin-top: 3rem;
+        padding: 2rem clamp(1.3rem, 3vw, 4rem)3rem clamp(1.3rem, 3vw, 4rem);
+    }
+    .grid-info{display: grid;justify-content: center;align-items: center;}
+    .project-info-section h1 {
+        text-align: center;
+    }
+    .project-info-section h1::after {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 0;
+        width: 20%;
+        height: 3px;
+    }
 }

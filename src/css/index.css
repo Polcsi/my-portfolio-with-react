@@ -77,11 +77,14 @@ body {
 }
 
 .section {
-  width: 100%;
-  height: auto;
-  padding: 13vh clamp(1.2rem, 6vw, 17rem);
+  padding: 13vh 0;
 }
-
+.section-container {
+  max-width: 1700px;
+  width: 95%;
+  height: 80%;
+  margin: auto;
+}
 .btn {
   cursor: pointer;
   text-transform: uppercase;

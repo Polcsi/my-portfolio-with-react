@@ -120,108 +120,113 @@ const Contact = () => {
           { title: "contact", type: "route", url: "/contact", active: true },
         ]}
       />
-      <div className="contact-title">
-        <h1>contact me</h1>
-        <p>
-          Contact me to learn more about my services. I will be happy to answer
-          your question and help you. I will get your message in my email inbox.
-        </p>
-      </div>
-      <form className="contact-page-form" onSubmit={handleSubmit}>
-        {alert.show && <Alert {...alert} setAlertHook={setAlertHook} />}
-        <input
-          type="text"
-          className={
-            isSent
-              ? "contact-input firstname disabled-input"
-              : "contact-input firstname "
-          }
-          placeholder="First Name*"
-          name="firstname"
-          value={email.firstname}
-          onChange={handleChange}
-          disabled={isSent && "disabled"}
-        />
-        <input
-          type="text"
-          className={
-            isSent
-              ? "contact-input lastname disabled-input"
-              : "contact-input lastname"
-          }
-          placeholder="Last Name*"
-          name="lastname"
-          value={email.lastname}
-          onChange={handleChange}
-          disabled={isSent && "disabled"}
-        />
-        <input
-          type="text"
-          className={
-            isSent
-              ? "contact-input email disabled-input"
-              : "contact-input email"
-          }
-          placeholder="Email*"
-          name="email"
-          value={email.email}
-          onChange={handleChange}
-          disabled={isSent && "disabled"}
-        />
-        <input
-          type="text"
-          className={
-            isSent ? "contact-input town disabled-input" : "contact-input town"
-          }
-          placeholder="Town"
-          name="town"
-          value={email.town}
-          onChange={handleChange}
-          disabled={isSent && "disabled"}
-        />
-        <textarea
-          className={
-            isSent
-              ? "contact-input message disabled-input"
-              : "contact-input message"
-          }
-          placeholder="Your Message...*"
-          name="message"
-          value={email.message}
-          onChange={handleChange}
-          disabled={isSent && "disabled"}
-        ></textarea>
-        <button
-          type="submit"
-          className={
-            isSent ? "btn submit-btn disabled-submit-btn" : "btn submit-btn"
-          }
-          disabled={isSent && "disabled"}
-        >
-          {isSent ? (
-            <img
-              src={loadingIcon}
-              alt="loading.gif"
-              className="loading-submit"
-            />
-          ) : (
-            "send"
-          )}
-        </button>
-      </form>
-      <div className="mapouter">
-        <div className="gmap_canvas">
-          <iframe
-            title="map"
-            width="612"
-            height="560"
-            id="gmap_canvas"
-            src="https://maps.google.com/maps?q=hungary%20p%C3%A9cs&t=&z=11&ie=UTF8&iwloc=&output=embed"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
-          ></iframe>
+      <div className="contact-page-container">
+        <div className="contact-title">
+          <h1>contact me</h1>
+          <p>
+            Contact me to learn more about my services. I will be happy to
+            answer your question and help you. I will get your message in my
+            email inbox.
+          </p>
+        </div>
+        <form className="contact-page-form" onSubmit={handleSubmit}>
+          {alert.show && <Alert {...alert} setAlertHook={setAlertHook} />}
+          <input
+            type="text"
+            className={
+              isSent
+                ? "contact-input firstname disabled-input"
+                : "contact-input firstname "
+            }
+            placeholder="First Name*"
+            name="firstname"
+            value={email.firstname}
+            onChange={handleChange}
+            disabled={isSent && "disabled"}
+          />
+          <input
+            type="text"
+            className={
+              isSent
+                ? "contact-input lastname disabled-input"
+                : "contact-input lastname"
+            }
+            placeholder="Last Name*"
+            name="lastname"
+            value={email.lastname}
+            onChange={handleChange}
+            disabled={isSent && "disabled"}
+          />
+          <input
+            type="text"
+            className={
+              isSent
+                ? "contact-input email disabled-input"
+                : "contact-input email"
+            }
+            placeholder="Email*"
+            name="email"
+            value={email.email}
+            onChange={handleChange}
+            disabled={isSent && "disabled"}
+          />
+          <input
+            type="text"
+            className={
+              isSent
+                ? "contact-input town disabled-input"
+                : "contact-input town"
+            }
+            placeholder="Town"
+            name="town"
+            value={email.town}
+            onChange={handleChange}
+            disabled={isSent && "disabled"}
+          />
+          <textarea
+            className={
+              isSent
+                ? "contact-input message disabled-input"
+                : "contact-input message"
+            }
+            placeholder="Your Message...*"
+            name="message"
+            value={email.message}
+            onChange={handleChange}
+            disabled={isSent && "disabled"}
+          ></textarea>
+          <button
+            type="submit"
+            className={
+              isSent ? "btn submit-btn disabled-submit-btn" : "btn submit-btn"
+            }
+            disabled={isSent && "disabled"}
+          >
+            {isSent ? (
+              <img
+                src={loadingIcon}
+                alt="loading.gif"
+                className="loading-submit"
+              />
+            ) : (
+              "send"
+            )}
+          </button>
+        </form>
+        <div className="mapouter">
+          <div className="gmap_canvas">
+            <iframe
+              title="map"
+              width="612"
+              height="560"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=hungary%20p%C3%A9cs&t=&z=11&ie=UTF8&iwloc=&output=embed"
+              frameBorder="0"
+              scrolling="no"
+              marginHeight="0"
+              marginWidth="0"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>

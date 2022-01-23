@@ -18,26 +18,28 @@ const Project = () => {
           { title: "contact", type: "route", url: "/contact" },
         ]}
       />
-      <div className="section-header">
-        <h2>project page</h2>
-        <h1>{title}</h1>
-      </div>
-      <div className="image-banner">
-        <img src={cover} alt="banner" />
-      </div>
-      <div className="project-info-section">
-        <div className="grid-info">
-          <h1>details about project</h1>
-          <p>{info}</p>
-          <span>{date}</span>
+      <div className="project-page-container">
+        <div className="section-header">
+          <h2>project page</h2>
+          <h1>{title}</h1>
         </div>
-        {url !== "" ? (
-          <a href={url} target="_blank" rel="noreferrer">
-            view project page
-          </a>
-        ) : (
-          ""
-        )}
+        <div className="image-banner">
+          <img src={cover} alt="banner" />
+        </div>
+        <div className="project-info-section">
+          <div className="grid-info">
+            <h1>details about project</h1>
+            <p>{info}</p>
+            <span>{date}</span>
+          </div>
+          {url !== "" ? (
+            <a href={url} target="_blank" rel="noreferrer">
+              view project page
+            </a>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </section>
   );
