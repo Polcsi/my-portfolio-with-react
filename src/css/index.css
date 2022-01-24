@@ -133,7 +133,6 @@ body {
   padding: clamp(10px, 1.6vw ,13px) clamp(35px, 6vw, 45px) !important;
   filter: hue-rotate(0deg);
   color: white !important;
-  
 }
 .primary-green-btn:hover {
   transform: scale(0.95);

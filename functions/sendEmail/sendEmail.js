@@ -38,9 +38,9 @@ exports.handler = async function (event, context, callback) {
   try {
     const { firstname, lastname, email_address, town, body } = data;
     let info = await transporter.sendMail({
-      from: "My Portfolio Website <pollak.bence01@gmail.com>",
+      from: "polcsicode.com <pollak.bence01@gmail.com>",
       to: "pollakbence12@gmail.com",
-      subject: `polcsicode.com`,
+      subject: `Message From Contact Form`,
       text: body,
       html: `
                 <h3>Full Name: <span style="font-weight: 300;">${firstname} ${lastname}</span><br>

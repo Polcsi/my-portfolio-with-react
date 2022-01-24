@@ -51,6 +51,7 @@
 .active-category {
     background-color: var(--green-primary) !important;
     color: white !important;
+    cursor: default !important;
 }
 .category-btn {
     border: 2px solid var(--green-primary) !important;
@@ -63,6 +64,7 @@
     width: auto;
     padding: 0 1.5rem;
     border-radius: 30px;
+    cursor: pointer;
 }
 .category-btn:hover {
     background-color: var(--green-primary);

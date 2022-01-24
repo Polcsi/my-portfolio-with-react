@@ -59,7 +59,6 @@
 }
 .about-section-grid {
   display: grid;
-  /* grid-template-rows: auto 30vh auto; */
   gap: clamp(2rem, 4vw, 6vw);
   place-items: center;
 }
