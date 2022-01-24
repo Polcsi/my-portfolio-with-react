@@ -221,3 +221,15 @@ body {
     bottom: 100%;
   }
 }
+
+.bg-black {
+  background: var(--gray-primary-3);
+}
+.absolute {
+  position: absolute;
+  z-index: 2000;
+  width: 100%;
+}
+body.overflow-hidden  {
+  overflow: hidden !important;
+}

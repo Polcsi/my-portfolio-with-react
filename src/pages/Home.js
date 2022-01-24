@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { InitialTransition } from "../pageTransition";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
@@ -10,7 +12,7 @@ import Contact from "../components/Contact";
 
 const Home = () => {
   return (
-    <>
+    <motion.div exit={{ opacity: 0 }}>
       <Navbar
         links={[
           { title: "home", type: "scroll", active: false },
@@ -22,6 +24,7 @@ const Home = () => {
           { title: "contact", type: "route", url: "/contact", active: false },
         ]}
       />
+      {InitialTransition()}
       <Hero />
       <About />
       <Skills />
@@ -29,7 +32,7 @@ const Home = () => {
       <Pricing />
       <FeaturedProjects />
       <Contact />
-    </>
+    </motion.div>
   );
 };
 
