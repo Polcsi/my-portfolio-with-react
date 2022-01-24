@@ -40,7 +40,7 @@ exports.handler = async function (event, context, callback) {
     let info = await transporter.sendMail({
       from: "My Portfolio Website <pollak.bence01@gmail.com>",
       to: "pollakbence12@gmail.com",
-      subject: `Email from ${email_address}...`,
+      subject: `polcsicode.com`,
       text: body,
       html: `
                 <h3>Full Name: <span style="font-weight: 300;">${firstname} ${lastname}</span><br>
