@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import "../css/home.css";
 import scrollIcon from "../icons/scroll-icon.svg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { title, content, main, secondaryTitle } from "../pageTransition";
 
 const Hero = () => {
   const rotate = useRef(null);
@@ -57,26 +59,39 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero-container" name="home">
+    <motion.div
+      initial="initial"
+      animate="animate"
+      variants={content}
+      className="hero-container"
+      name="home"
+    >
       <div className="hero-overlay"></div>
       <div className="hero-grid">
         <div className="hero-header">
-          <h2>welcome to my website</h2>
-          <h1>
+          <motion.h2 variants={title}>welcome to my website</motion.h2>
+          <motion.h1 variants={secondaryTitle}>
             <span
               ref={rotate}
               className="txt-rotate"
               data-period="2000"
               data-rotate='[ "web developer", "UX & UI Designer", "frontend developer", "backend developer", "IT engineer" ]'
             ></span>
-          </h1>
-          <Link className="btn white-border-btn" to="/contact">
-            contact me
-          </Link>
+          </motion.h1>
+          <motion.div variants={main}>
+            <Link className="btn white-border-btn" to="/contact">
+              contact me
+            </Link>
+          </motion.div>
         </div>
       </div>
-      <img className="hero-scroll-icon" src={scrollIcon} alt="scroll-icon" />
-    </div>
+      <motion.img
+        variants={main}
+        className="hero-scroll-icon"
+        src={scrollIcon}
+        alt="scroll-icon"
+      />
+    </motion.div>
   );
 };
 

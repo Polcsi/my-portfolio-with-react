@@ -34,13 +34,13 @@
 }
 .hero-header h2 {
     text-transform: uppercase;
-    font-size: clamp(1.4rem, 1.8vw, 2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
     letter-spacing: 3px;
 }
 .hero-header h1 {
     text-transform: capitalize;
     font-weight: 400;
-    font-size: clamp(3.9rem, 5vw, 6.5rem);
+    font-size: clamp(3.2rem, 5vw, 6.5rem);
     line-height: 70px;
 }
 .hero-scroll-icon {
@@ -559,6 +559,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .hero-header {
+    grid-template-rows: 8vh auto 16vh;
+  }
   .info article {
     width: 100%;
     display: grid;
