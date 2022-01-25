@@ -61,21 +61,3 @@
 .project-info-section a:hover {
     color: var(--green-primary-3);
 }
-@media screen and (max-width: 768px) {
-    .project-info-section {
-        margin: 0 0;
-        margin-top: 3rem;
-        padding: 2rem clamp(1.3rem, 3vw, 4rem)3rem clamp(1.3rem, 3vw, 4rem);
-    }
-    .grid-info{display: grid;justify-content: center;align-items: center;}
-    .project-info-section h1 {
-        text-align: center;
-    }
-    .project-info-section h1::after {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        bottom: 0;
-        width: 20%;
-        height: 3px;
-    }
-}

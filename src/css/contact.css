@@ -127,34 +127,7 @@
     }
 }
 @media screen and (max-width: 730px) {
-    .contact-page-container {
-        grid-template-areas: 
-            'title title'
-            'form form'
-            'map map';
-        padding-bottom: 5vh !important;
-        padding-top: 15vh;
-    }
     .mapouter {
         display: none;
-    }
-    .contact-page-form {
-    display: grid;
-    grid-template-areas:
-    'firstname firstname'
-    'lastname lastname'
-    'email email'
-    'town town'
-    'message message'
-    'btn btn';
-    grid-gap: 1.5rem;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-    }  
-    .contact-page {
-        padding: 0vh;
-        height: auto;
-    }
-        .message {
-        height: 200px;
     }
 }

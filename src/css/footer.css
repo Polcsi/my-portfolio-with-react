@@ -24,7 +24,7 @@ footer {
 }
 .creator span:nth-child(1) {
     color: #C83838;
-    vertical-align: middle;
+    margin: auto;
     font-size: clamp(1rem, 1.1vw, 1.2rem);
 }
 .creator {
