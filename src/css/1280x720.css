@@ -1,4 +1,4 @@
-@media screen and (max-width: 1280px) and (max-height: 1024px) {
+@media screen and (max-width: 1280px) and (max-height: 720px) {
     .primary-green-btn {
         font-size: clamp(.7rem, .8vw, 1rem) !important;
         padding: clamp(8px, 1.5vw ,10px) clamp(25px, 6vw, 35px) !important;
@@ -129,11 +129,39 @@
         width: 84%;
         gap: 1.5rem clamp(1rem, 3vw, 5rem);
     }
-    /* Contact Page */
-    .contact-page {
-        height: 100vh;
-        padding: 10vh 0 5vh 0;
+    .contact-cards {
+        gap: .7rem;
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
     }
+    .contact-cards > article {
+        padding: 1rem;
+        width: 300px;
+    }
+    .contact-cards article {
+        gap: 1.3rem;
+        padding: 1.2rem 1.4rem;
+        width: auto;
+    }
+    .contact-cards article svg {
+        font-size: clamp(1.3rem, 1.6vw, 1.6rem);
+    }
+    .contact-cards article p {
+        font-size: clamp(.8rem, 1vw, 1rem);
+    }
+    .mini-alert {
+        border-radius: 5px;
+        padding: 1.1rem 1.5rem;
+        gap: 1rem;
+    }
+    .mini-alert p {
+        font-size: clamp(.7rem, 1vw, 1rem);
+    }
+    .mini-alert svg {
+        font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+    }
+    /* Contact Page */
     .contact-page-form {
         display: grid;
         grid-template-areas:
@@ -148,11 +176,11 @@
     }  
     .contact-title h1 {
         font-size: 2.2rem;
-        text-align: unset;
+        text-align: center;
         margin-bottom: .5rem;
     }
     .contact-title p {
-        text-align: unset;
+        text-align: center;
         font-size: .7rem;
     }
     .contact-input {
@@ -166,15 +194,20 @@
         height: 200px;
     }
     .contact-page-container {
-        grid-gap: 3rem 3.7rem;
+        grid-template-areas: 
+        'title title'
+        'form form'
+        'map map';
+        grid-gap: 3rem 6rem;
     }
     .mapouter{
-        height: 500px;
-        width: 530px;
+        display: none;
+        height: auto;
+        width: 100%;
         text-align: center;
     }
     .gmap_canvas {
-        height: 100%;
+        height: auto;
         width: 100%;
         background-size: 2.5rem;
     }

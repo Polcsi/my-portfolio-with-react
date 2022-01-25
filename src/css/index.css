@@ -7,6 +7,7 @@
 }
 html, body {
   height: 100vh;
+  background-color: var(--gray-primary-1);
 }
 body {
   font-family: 'Poppins', sans-serif;

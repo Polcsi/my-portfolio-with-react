@@ -14,7 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Router>
         <ScrollToTop>
           <AnimatePresence>

@@ -15,7 +15,7 @@ const Footer = () => {
           {social.map(({ id, url, icon, text }) => {
             return (
               <article key={id}>
-                <a title={text} href={url}>
+                <a title={text} href={url} target="_blank" rel="noreferrer">
                   {icon}
                 </a>
               </article>

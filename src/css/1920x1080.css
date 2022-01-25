@@ -1,0 +1,96 @@
+@media all and (max-width:1920px) and (max-height:1080px) {
+    /* nav */
+    .navbar{
+        padding: 2rem 1rem 1rem 1rem;
+    }
+    .navbar.sticky{
+        padding: 1rem 1rem 1.2rem 1rem !important;
+    }
+    .logo img {
+        width: 53px;
+    }
+    .menu-list li a {
+        font-size: clamp(1rem, 1.1vw, 1.6rem);
+        padding: .3rem 0;
+    }
+    .menu-list li a::before {
+        height: 3px;
+    }
+    /* Home */
+    .about-text p {
+        font-size: clamp(.8rem, 1.4vw, 1rem);
+    }
+    .info {
+        gap: 4rem;
+        padding: 3rem;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .info-icon {
+        width: clamp(70px, 10vw, 90px);
+    }
+    .info article {
+        width: 400px;
+        grid-gap: 1.3rem;
+    }
+    .info article .info-title {
+        font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+    }
+    .info article .info-text {
+        font-size: clamp(.7rem, 1vw, .9rem);
+    }
+    .pricing-plan {
+       width: 520px;
+    }
+    .work-together-card {
+        padding: 3rem 4rem;
+        width: 89%;
+        grid-gap: 1.5rem clamp(1rem, 3vw, 5rem);
+        gap: 1.5rem clamp(1rem, 3vw, 5rem);
+    }
+    /* Project Page */
+    .project-info-section h1 {
+        font-size: clamp(2rem, 2.5vw, 3rem);
+        padding-bottom: 1rem;
+    }
+    .project-info-section h1::after {
+        width: 15%;
+        height: 2px;
+    }
+    .project-info-section p, .project-info-section span {
+        font-size: 1rem;
+    }
+    .project-info-section p {
+        padding: 2.2rem 0;
+    }
+    .project-info-section a {
+        font-size: clamp(.8rem, .8vw, 1.1rem);
+    }
+    /* footer */
+    .upper-layer {
+        padding: .9rem 0;
+    }
+    .footer-logo img{
+        width: 40px;
+    }
+    .footer-socail-icons {
+        gap: 1.3rem;
+    }
+    .footer-socail-icons article a{
+        font-size: clamp(.8rem, 1.04vw, 1.6rem);
+    }
+    .creator span:nth-child(1) {
+        font-size: clamp(.6rem, .9vw, 1.2rem);
+    }
+    .creator {
+        font-size: clamp(.7rem, .8vw, 1.1rem);
+        gap: .2rem;
+    }
+    .down-layer {
+        padding: .75rem;
+        gap: .2rem;
+    }
+    .down-layer span {
+        font-size: clamp(.6rem, .7vw, 1rem);
+    }
+}
