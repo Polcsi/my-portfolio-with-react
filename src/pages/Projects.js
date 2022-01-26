@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useGlobalContext } from "../context";
 import "../css/projects.css";
 import ProjectList from "../components/ProjectList";
@@ -11,6 +11,7 @@ import {
   secondaryTitle,
 } from "../pageTransition";
 import { motion } from "framer-motion";
+import { useResize } from "../useResize";
 
 const Projects = () => {
   const {
@@ -21,7 +22,61 @@ const Projects = () => {
     setAmount,
     active,
     setActive,
+    dimensions,
+    addTouchEventListener,
+    checkSize,
   } = useGlobalContext();
+
+  const categoriesRef = useRef(null);
+
+  useResize();
+
+  const onPointerEvent = (e) => {
+    if (
+      addTouchEventListener ||
+      checkSize(dimensions.width, dimensions.height)
+    ) {
+      let isTouchEvent = e.type === "touchstart" ? true : false;
+      let offset = 0;
+      let initialX = isTouchEvent ? e.touches[0].clientX : e.clientX;
+
+      if (isTouchEvent) {
+        document.ontouchmove = onPointerMove;
+        document.ontouchend = onPointerEnd;
+      } else {
+        document.onmousemove = onPointerMove;
+        document.onmouseup = onPointerEnd;
+      }
+
+      function onPointerMove(e) {
+        let categoriesWidth =
+          categoriesRef.current.getBoundingClientRect().width;
+        let categoriesEnd = -(categoriesWidth / categories.length);
+
+        offset = (isTouchEvent ? e.touches[0].clientX : e.clientX) - initialX;
+
+        if (offset >= 25) {
+          categoriesRef.current.style.left = "15px";
+        } else if (offset <= categoriesEnd) {
+          categoriesRef.current.style.left = "-120px";
+        } else {
+          categoriesRef.current.style.left = offset + "px";
+        }
+      }
+
+      function onPointerEnd() {
+        if (isTouchEvent) {
+          document.ontouchmove = null;
+          document.ontouchend = null;
+        } else {
+          document.onmousemove = null;
+          document.onmouseup = null;
+        }
+      }
+    } else {
+      return;
+    }
+  };
 
   return (
     <>
@@ -53,26 +108,32 @@ const Projects = () => {
                 done.
               </p>
             </motion.div>
-            <motion.div variants={secondaryTitle} className="categories">
-              {categories.map((category, index) => {
-                return (
-                  <button
-                    className={
-                      active === category
-                        ? "category-btn active-category"
-                        : "category-btn"
-                    }
-                    key={index}
-                    onClick={() => {
-                      filterProjects(category);
-                      setActive(category);
-                    }}
-                  >
-                    {category}
-                  </button>
-                );
-              })}
-            </motion.div>
+            <div className="categories-container" onTouchStart={onPointerEvent}>
+              <motion.div
+                variants={secondaryTitle}
+                className="categories"
+                ref={categoriesRef}
+              >
+                {categories.map((category, index) => {
+                  return (
+                    <button
+                      className={
+                        active === category
+                          ? "category-btn active-category"
+                          : "category-btn"
+                      }
+                      key={index}
+                      onClick={() => {
+                        filterProjects(category);
+                        setActive(category);
+                      }}
+                    >
+                      {category}
+                    </button>
+                  );
+                })}
+              </motion.div>
+            </div>
           </div>
           <motion.div variants={main} className="featured-project-list">
             <ProjectList amount={amount} filter={true} />

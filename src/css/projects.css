@@ -30,6 +30,9 @@
     font-size: clamp(.8rem, 1.3vw, 1.1rem);
     text-transform: capitalize;
 }
+.categories-container {
+    margin: auto 0;
+}
 .categories {
     display: flex;
     flex-flow: row wrap;
