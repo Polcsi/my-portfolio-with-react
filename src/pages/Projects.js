@@ -51,14 +51,14 @@ const Projects = () => {
       function onPointerMove(e) {
         let categoriesWidth =
           categoriesRef.current.getBoundingClientRect().width;
-        let categoriesEnd = -(categoriesWidth / categories.length);
+        let categoriesEnd = -(categoriesWidth / (categories.length / 2));
 
         offset = (isTouchEvent ? e.touches[0].clientX : e.clientX) - initialX;
 
         if (offset >= 25) {
           categoriesRef.current.style.left = "15px";
         } else if (offset <= categoriesEnd) {
-          categoriesRef.current.style.left = "-120px";
+          categoriesRef.current.style.left = `${categoriesEnd}px`;
         } else {
           categoriesRef.current.style.left = offset + "px";
         }
@@ -108,7 +108,11 @@ const Projects = () => {
                 done.
               </p>
             </motion.div>
-            <div className="categories-container" onTouchStart={onPointerEvent}>
+            <div
+              className="categories-container"
+              onMouseDown={onPointerEvent}
+              onTouchStart={onPointerEvent}
+            >
               <motion.div
                 variants={secondaryTitle}
                 className="categories"

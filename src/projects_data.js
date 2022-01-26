@@ -28,7 +28,7 @@ export const projects = [
   {
     id: 3,
     title: "UI & UX website design",
-    category: "UI&UX design",
+    category: "UI&UX",
     cover: uiuxdesign,
     url: "",
     date: "2022.01.01.",
@@ -37,7 +37,7 @@ export const projects = [
   {
     id: 4,
     title: "UI hero section design",
-    category: "UI&UX design",
+    category: "UI&UX",
     cover: uidesign1,
     url: "",
     date: "2022.01.01.",
@@ -90,8 +90,8 @@ export const projects = [
   },
   {
     id: 11,
-    title: "sending email with vanilla js",
-    category: "testing",
+    title: "my own portfolio",
+    category: "website",
     cover: semail,
     url: "",
     date: "2022.01.01.",

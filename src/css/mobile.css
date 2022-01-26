@@ -290,11 +290,17 @@
     .categories {
         display: flex;
         flex-flow: unset;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        justify-content: unset;
+        align-items: unset;
+        gap: .9rem;
         position: absolute;
         left: 10px;
+    }
+    .category-btn {
+        border: 2px solid var(--green-primary) !important;
+        font-size: clamp(.7rem, .9vw, .9rem);
+        height: clamp(35px, 3vw, 40px);
+        padding: 0 1.5rem;
     }
     .category-btn:hover {
         background-color: transparent;
@@ -311,12 +317,6 @@
     }
     .projects-page-header-title p{
         font-size: clamp(.7rem, 1vw, .9rem);
-    }
-    .category-btn {
-        border: 2px solid var(--green-primary) !important;
-        font-size: .7rem;
-        height: clamp(35px, 3vw, 40px);
-        padding: 0 1.5rem;
     }
     .featured-project-list {
         gap: .8rem;
