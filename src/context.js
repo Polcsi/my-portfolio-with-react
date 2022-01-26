@@ -28,6 +28,31 @@ const AppProvider = ({ children }) => {
     setAmount(newProjects.length);
   };
 
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+  const [addTouchEventListener, setTouchEventListener] = useState(false);
+
+  function checkSize(w, h) {
+    if (w <= 500 && h <= 920) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function debounce(fn, ms) {
+    let timer;
+    return (_) => {
+      clearTimeout(timer);
+      timer = setTimeout((_) => {
+        timer = null;
+        fn.apply(this, arguments);
+      }, ms);
+    };
+  }
+
   return (
     <AppContext.Provider
       value={{
@@ -42,6 +67,12 @@ const AppProvider = ({ children }) => {
         active,
         setActive,
         projects,
+        dimensions,
+        setDimensions,
+        debounce,
+        addTouchEventListener,
+        setTouchEventListener,
+        checkSize,
       }}
     >
       {children}
