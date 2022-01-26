@@ -56,7 +56,7 @@ const Projects = () => {
         offset = (isTouchEvent ? e.touches[0].clientX : e.clientX) - initialX;
 
         if (offset >= 25) {
-          categoriesRef.current.style.left = "15px";
+          categoriesRef.current.style.left = "30px";
         } else if (offset <= categoriesEnd) {
           categoriesRef.current.style.left = `${categoriesEnd}px`;
         } else {
