@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../icons/logo.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { social } from "../data";
@@ -10,16 +10,22 @@ const Navbar = ({ links }) => {
   const [showLinks, setShowLinks] = useState(false);
   const [scroll, setScroll] = useState(false);
 
-  window.addEventListener("scroll", function () {
-    this.scrollY > 50 ? setScroll(true) : setScroll(false);
-    /* progress bar */
-    let winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    let height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    this.document.getElementById("my-bar").style.width = scrolled + "%";
+  useEffect(() => {
+    function scrollEvent() {
+      this.scrollY > 50 ? setScroll(true) : setScroll(false);
+      /* progress bar */
+      let winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      let height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      this.document.getElementById("my-bar").style.width = scrolled + "%";
+    }
+    window.addEventListener("scroll", scrollEvent);
+    return (_) => {
+      window.removeEventListener("scroll", scrollEvent);
+    };
   });
 
   const handlingEvents = () => {
