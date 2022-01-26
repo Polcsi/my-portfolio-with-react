@@ -287,6 +287,22 @@
         height: 40px;
         overflow: hidden;
     }
+    .fade-left, .fade-right {
+        display: unset;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        height: 40px;
+        width: 30px;
+    }
+    .fade-left {
+        background: linear-gradient(to right, rgba(44,44,44,1), rgba(44,44,44,0));
+        left: 0;
+    }
+    .fade-right {
+        background: linear-gradient(to left, rgba(44,44,44,1), rgba(44,44,44,0));
+        right: 0;
+    }
     .categories {
         display: flex;
         flex-flow: unset;
@@ -294,7 +310,8 @@
         align-items: unset;
         gap: .9rem;
         position: absolute;
-        left: 10px;
+        left: 15px;
+        cursor: grab;
     }
     .category-btn {
         border: 2px solid var(--green-primary) !important;

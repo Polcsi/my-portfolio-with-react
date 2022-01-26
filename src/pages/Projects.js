@@ -108,16 +108,15 @@ const Projects = () => {
                 done.
               </p>
             </motion.div>
-            <div
+            <motion.div
               className="categories-container"
+              variants={secondaryTitle}
               onMouseDown={onPointerEvent}
               onTouchStart={onPointerEvent}
             >
-              <motion.div
-                variants={secondaryTitle}
-                className="categories"
-                ref={categoriesRef}
-              >
+              <div className="fade-left"></div>
+              <div className="fade-right"></div>
+              <div className="categories" ref={categoriesRef}>
                 {categories.map((category, index) => {
                   return (
                     <button
@@ -136,8 +135,8 @@ const Projects = () => {
                     </button>
                   );
                 })}
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </div>
           <motion.div variants={main} className="featured-project-list">
             <ProjectList amount={amount} filter={true} />
