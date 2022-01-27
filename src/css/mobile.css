@@ -36,11 +36,17 @@
     }
     .white-border-btn:hover {
         background: transparent;
-        color: unset;
+        color: var(--text-color);
         transform: scale(1);
+    }
+    .white-border-btn:active {
+        transform: scale(0.92);
     }
     .contact-section a:hover {
         background: unset;
+        color: var(--green-primary);
+    }
+    .project-body a:hover {
         color: var(--green-primary);
     }
     /* nav */
@@ -317,6 +323,27 @@
         height: clamp(2.5rem, 3vw, 3rem);
         font-size: clamp(.8rem, 1vw, 1.1rem) !important;
     }
+    .submit-btn:hover {
+        background: var(--green-primary) !important;
+    }
+    .submit-btn:active {
+        background: var(--green-primary-3) !important;
+    }
+    .dark-border {
+        border: 3px solid var(--gray-primary-5) !important;
+        color: var(--green-primary-2);
+    }
+    .dark-border:hover {
+        background: transparent !important;
+        color: var(--green-primary-2);
+        transform: scale(1);
+    }
+    /* Error Page */
+    .error-background-circle {
+        z-index: -1;
+        top: 40%;
+        height: 125vh; 
+    }
     /* Projects Page */
     .categories-container {
         position: relative;
@@ -428,6 +455,10 @@
         font-size: clamp(.8rem, 1vw, 1.1rem);
     }
      /* footer */
+    footer {
+        position: absolute;
+        z-index: 50;
+    }
     .upper-layer {
         padding: .6rem 0;
     }

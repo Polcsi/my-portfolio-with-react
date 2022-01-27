@@ -80,7 +80,11 @@ const Navbar = ({ links }) => {
           </ul>
         </ul>
         <div
-          className={showLinks ? "icon menu-btn hide" : "icon menu-btn show"}
+          className={
+            showLinks || links.length === 0
+              ? "icon menu-btn hide"
+              : "icon menu-btn show"
+          }
         >
           <FaBars onClick={() => setShowLinks(true)} />
         </div>
