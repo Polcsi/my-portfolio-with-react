@@ -106,6 +106,10 @@
     .info article .info-text {
         font-size: clamp(.7rem, 1vw, .9rem);
     }
+    .skills-section {
+        background-size: cover;
+        background-attachment: unset;
+    }
     .skills-container {
         gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));

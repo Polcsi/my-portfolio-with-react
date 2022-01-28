@@ -187,8 +187,6 @@ const Projects = () => {
             </div>
           )}
         </div>
-
-        {/* <div className="triangle-object"></div> */}
       </motion.section>
     </>
   );
