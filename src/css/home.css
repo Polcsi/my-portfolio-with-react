@@ -3,6 +3,7 @@
     height: 100vh;
     background: url("../images/hero-img.jpg");
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
@@ -110,9 +111,10 @@
   width: 100%;
   height: auto;
   background: url("../images/skills-background.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   color: var(--text-color);
 }

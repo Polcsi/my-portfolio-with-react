@@ -56,8 +56,12 @@
     font-weight: 600;
     text-decoration: none;
     font-size: clamp(1rem, 1.2vw, 1.3rem);
+    transform: scale(1);
     transition: all ease .2s;
 }
 .project-info-section a:hover {
+    color: var(--green-primary-3);
+}
+.project-info-section a:active {
     color: var(--green-primary-3);
 }

@@ -110,6 +110,9 @@
         gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
+    .skills-section {
+        background-size: 180% 100%;
+    }
     .skills-container article .title h3{
         font-size: clamp(.9rem, 1.2vw, 1.2rem);
     }
@@ -453,6 +456,9 @@
     }
     .project-info-section a {
         font-size: clamp(.8rem, 1vw, 1.1rem);
+    }
+    .project-info-section a:hover {
+        color: var(--green-primary);
     }
      /* footer */
     footer {
