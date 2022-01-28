@@ -171,10 +171,24 @@ const Projects = () => {
           <motion.div variants={main} className="featured-project-list">
             <ProjectList amount={amount} filter={true} />
           </motion.div>
+          {loading && (
+            <div className="project-loader">
+              <div className="mosaic-loader">
+                <div className="cell d-1"></div>
+                <div className="cell d-2"></div>
+                <div className="cell d-4"></div>
+                <div className="cell d-2"></div>
+                <div className="cell d-3"></div>
+                <div className="cell d-5"></div>
+                <div className="cell d-3"></div>
+                <div className="cell d-4"></div>
+                <div className="cell d-5"></div>
+              </div>
+            </div>
+          )}
         </div>
-        {loading && "Loading..."}
 
-        <div className="triangle-object"></div>
+        {/* <div className="triangle-object"></div> */}
       </motion.section>
     </>
   );

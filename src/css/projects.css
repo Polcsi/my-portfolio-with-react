@@ -85,3 +85,94 @@
         text-align: center;
     }
 }
+
+/* Loader */
+
+.project-loader {
+    place-self: center;
+}
+.mosaic-loader {
+  --cell-size: 16px;
+  --cell-spacing: .5px;
+  --border-width: 1px;
+  --cells: 3;
+  --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--total-size);
+  height: var(--total-size);
+  /* animation: rotate 2s infinite; */
+}
+@keyframes rotate {
+    from { transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+.mosaic-loader > .cell {
+  --cell-color: white;
+  flex: 0 0 var(--cell-size);
+  margin: var(--cell-spacing);
+  background-color: transparent;
+  box-sizing: border-box;
+  border: var(--border-width) solid var(--cell-color);
+  animation: 1.5s ripple ease infinite;
+}
+.mosaic-loader > .cell.d-1 {
+  animation-delay: 100ms;
+}
+.mosaic-loader > .cell.d-2 {
+  animation-delay: 200ms;
+}
+.mosaic-loader > .cell.d-3 {
+  animation-delay: 300ms;
+}
+.mosaic-loader > .cell.d-4 {
+  animation-delay: 400ms;
+}
+.mosaic-loader > .cell.d-5 {
+  animation-delay: 500ms;
+}
+.mosaic-loader > .cell.d-6 {
+  animation-delay: 600ms;
+}
+.mosaic-loader > .cell:nth-child(1) {
+  --cell-color: var(--green-primary);
+}
+.mosaic-loader > .cell:nth-child(2) {
+  --cell-color: var(--green-primary);
+}
+.mosaic-loader > .cell:nth-child(3) {
+  --cell-color: var(--green-primary);
+}
+.mosaic-loader > .cell:nth-child(4) {
+  --cell-color: var(--green-primary);
+}
+.mosaic-loader > .cell:nth-child(5) {
+  --cell-color: var(--green-primary);
+}
+.mosaic-loader > .cell:nth-child(6) {
+  --cell-color: var(--green-primary-3);
+}
+.mosaic-loader > .cell:nth-child(7) {
+  --cell-color: var(--green-primary);
+}
+.mosaic-loader > .cell:nth-child(8) {
+  --cell-color: var(--green-primary-3);
+}
+.mosaic-loader > .cell:nth-child(9) {
+  --cell-color: var(--green-primary-3);
+}
+
+@keyframes ripple {
+  0% {
+    background-color: transparent;
+  }
+  30% {
+    background-color: var(--cell-color);
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
