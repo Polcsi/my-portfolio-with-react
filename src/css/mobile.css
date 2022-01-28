@@ -110,9 +110,6 @@
         gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
-    .skills-section {
-        background-size: 180% 100%;
-    }
     .skills-container article .title h3{
         font-size: clamp(.9rem, 1.2vw, 1.2rem);
     }

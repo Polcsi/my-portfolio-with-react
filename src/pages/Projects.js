@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useGlobalContext } from "../context";
 import "../css/projects.css";
 import ProjectList from "../components/ProjectList";
@@ -28,6 +28,7 @@ const Projects = () => {
   } = useGlobalContext();
 
   const categoriesRef = useRef(null);
+  const [loading, setLoading] = useState(false);
 
   useResize();
 
@@ -78,6 +79,34 @@ const Projects = () => {
     }
   };
 
+  function delayLoading(ms) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(setLoading(false));
+      }, ms);
+    });
+  }
+
+  async function loadProjects() {
+    await delayLoading(1000);
+    setAmount(amount + 3);
+  }
+
+  const event = () => {
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
+      if (amount >= allProjects.length) {
+        return;
+      }
+      setLoading(true);
+      loadProjects();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", event);
+    return () => window.removeEventListener("scroll", event);
+  });
+
   return (
     <>
       {InitialTransition()}
@@ -125,6 +154,7 @@ const Projects = () => {
                           ? "category-btn active-category"
                           : "category-btn"
                       }
+                      disabled={active === category ? "disabled" : ""}
                       key={index}
                       onClick={() => {
                         filterProjects(category);
@@ -141,30 +171,8 @@ const Projects = () => {
           <motion.div variants={main} className="featured-project-list">
             <ProjectList amount={amount} filter={true} />
           </motion.div>
-          <div className="load-more-container">
-            {" "}
-            <button
-              className={
-                allProjects.length <= amount
-                  ? "btn white-border-btn load-more-project hide"
-                  : "btn white-border-btn load-more-project"
-              }
-              onClick={() => setAmount(amount + 3)}
-            >
-              load more
-            </button>
-            <button
-              className={
-                allProjects.length >= amount
-                  ? "btn white-border-btn load-more-project hide"
-                  : "btn white-border-btn load-more-project"
-              }
-              onClick={() => setAmount(amount - 3)}
-            >
-              load less
-            </button>
-          </div>
         </div>
+        {loading && "Loading..."}
 
         <div className="triangle-object"></div>
       </motion.section>

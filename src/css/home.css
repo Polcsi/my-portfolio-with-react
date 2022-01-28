@@ -111,7 +111,7 @@
   width: 100%;
   height: auto;
   background: url("../images/skills-background.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

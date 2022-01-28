@@ -76,9 +76,6 @@
     background-color: var(--green-primary);
     color: white;
 }
-.load-more-container {
-    place-self: center;
-}
 @media screen and (max-width: 1400px) {
     .projects-page-header {
         flex-direction: column;

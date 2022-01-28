@@ -4,8 +4,9 @@ import { projects } from "./projects_data";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const renderedProjects = 9;
   const [allProjects, setAllProjects] = useState(projects);
-  const [amount, setAmount] = useState(9);
+  const [amount, setAmount] = useState(renderedProjects);
   const [active, setActive] = useState("all");
   const allCategories = [
     "all",
@@ -20,12 +21,12 @@ const AppProvider = ({ children }) => {
   const filterProjects = (category) => {
     if (category === "all") {
       setAllProjects(projects);
-      setAmount(9);
+      setAmount(renderedProjects);
       return;
     }
     const newProjects = projects.filter((item) => item.category === category);
     setAllProjects(newProjects);
-    setAmount(newProjects.length);
+    setAmount(renderedProjects);
   };
 
   const [dimensions, setDimensions] = useState({
