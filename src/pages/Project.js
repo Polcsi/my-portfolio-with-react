@@ -11,8 +11,11 @@ import {
 import { motion } from "framer-motion";
 import "../css/project.css";
 import Navbar from "../components/Navbar";
+import { useLocationChange } from "../useLocationChange";
 
 const Project = () => {
+  useLocationChange();
+
   const { searchProject } = useGlobalContext();
   const urlParam = useParams();
   const { title, cover, url, date, info } = searchProject(urlParam.id)[0];

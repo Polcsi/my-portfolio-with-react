@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { initialTextTransition } from "../pageTransition";
+import { initialTextTransition, InitialTransition } from "../pageTransition";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
@@ -9,8 +9,11 @@ import Pricing from "../components/Pricing";
 import FeaturedProjects from "../components/FeaturedProjects";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
+import { useGlobalContext } from "../context";
 
 const Home = () => {
+  const { isFirstMount } = useGlobalContext();
+
   return (
     <motion.div exit={{ opacity: 0 }}>
       <Navbar
@@ -24,7 +27,7 @@ const Home = () => {
           { title: "contact", type: "route", url: "/contact", active: false },
         ]}
       />
-      {initialTextTransition()}
+      {isFirstMount ? InitialTransition() : initialTextTransition()}
       <Hero />
       <About />
       <Skills />

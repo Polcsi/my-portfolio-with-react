@@ -240,4 +240,21 @@ body.overflow-hidden  {
 }
 .transition-logo {
   width: 100px;
+  height: 120px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.white-text {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: clamp(.9rem, 1.6vw, 2rem);
+}
+.white-text .uppercase {
+  text-transform: uppercase;
+    font-weight: 600;
 }

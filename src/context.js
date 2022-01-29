@@ -8,6 +8,7 @@ const AppProvider = ({ children }) => {
   const [allProjects, setAllProjects] = useState(projects);
   const [amount, setAmount] = useState(renderedProjects);
   const [active, setActive] = useState("all");
+  const [isFirstMount, setIsFirstMount] = useState(false);
   const allCategories = [
     "all",
     ...new Set(allProjects.map((category) => category.category)),
@@ -74,6 +75,8 @@ const AppProvider = ({ children }) => {
         addTouchEventListener,
         setTouchEventListener,
         checkSize,
+        isFirstMount,
+        setIsFirstMount,
       }}
     >
       {children}

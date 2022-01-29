@@ -12,8 +12,10 @@ import {
 } from "../pageTransition";
 import { motion } from "framer-motion";
 import { useResize } from "../useResize";
+import { useLocationChange } from "../useLocationChange";
 
 const Projects = () => {
+  useLocationChange();
   const {
     allProjects,
     categories,

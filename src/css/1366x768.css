@@ -1,6 +1,7 @@
 @media all and (max-width:1366px) and (max-height:768px) {
     .transition-logo {
         width: 70px;
+        height: 90px;
     }
     .primary-green-btn {
         font-size: clamp(.7rem, .8vw, 1rem) !important;

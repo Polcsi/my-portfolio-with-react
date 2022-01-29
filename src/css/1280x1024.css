@@ -1,4 +1,8 @@
 @media screen and (max-width: 1280px) and (max-height: 1024px) {
+    .transition-logo {
+        width: 69px;
+        height: 89px;
+    }
     .primary-green-btn {
         font-size: clamp(.7rem, .8vw, 1rem) !important;
         padding: clamp(8px, 1.5vw ,10px) clamp(25px, 6vw, 35px) !important;

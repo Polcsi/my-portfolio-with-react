@@ -6,8 +6,11 @@ import Alert from "../components/Alert";
 import axios from "axios";
 import loadingIcon from "../icons/loading-buffering.gif";
 import Navbar from "../components/Navbar";
+import { useLocationChange } from "../useLocationChange";
 
 const Contact = () => {
+  useLocationChange();
+
   const [email, setEmail] = useState({
     firstname: "",
     lastname: "",
