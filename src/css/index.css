@@ -238,26 +238,6 @@ body {
 body.overflow-hidden  {
   overflow: hidden !important;
 }
-.z-50 {
-  position: absolute;
-  z-index: 3000;
-}
-.text-4xl {
-  font-size: 2rem;
-}
-.text-white {
-  background-color: white;
-  color: var(--text-color);
-}
-.text-gray-600 {
-  color: gray;
-}
-.font-bold {
-  font-weight: bold;
-}
-.w-full {
-  width: 100%;
-}
-.h-full {
-  height: 100%;
+.transition-logo {
+  width: 100px;
 }
