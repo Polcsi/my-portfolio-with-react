@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { initialTextTransition, InitialTransition } from "../pageTransition";
+import { InitialTextTransition, InitialTransition } from "../pageTransition";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
@@ -27,7 +27,7 @@ const Home = () => {
           { title: "contact", type: "route", url: "/contact", active: false },
         ]}
       />
-      {isFirstMount ? InitialTransition() : initialTextTransition()}
+      {isFirstMount ? <InitialTransition /> : <InitialTextTransition />}
       <Hero />
       <About />
       <Skills />

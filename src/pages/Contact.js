@@ -118,7 +118,7 @@ const Contact = () => {
 
   return (
     <>
-      {InitialTransition()}
+      <InitialTransition />
       <div className="contact-page">
         <Navbar
           links={[

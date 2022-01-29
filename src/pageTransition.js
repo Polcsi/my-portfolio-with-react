@@ -147,7 +147,7 @@ const circles = {
   },
 };
 
-export const initialTextTransition = () => {
+export const InitialTextTransition = () => {
   return (
     <div className="absolute">
       <motion.div

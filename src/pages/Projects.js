@@ -111,7 +111,7 @@ const Projects = () => {
 
   return (
     <>
-      {InitialTransition()}
+      <InitialTransition />
       <motion.section
         initial="initial"
         animate="animate"
