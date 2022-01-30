@@ -112,7 +112,7 @@
     }
     .skills-section {
         background-size: cover;
-        background-attachment: unset;
+        background-attachment: scroll;
     }
     .skills-container {
         gap: 1rem;
