@@ -125,7 +125,7 @@ export const skillsInfo = [
   {
     id: 1,
     title: "html5 & css",
-    progress: "80",
+    progress: "90",
   },
   {
     id: 2,
@@ -135,17 +135,17 @@ export const skillsInfo = [
   {
     id: 3,
     title: "react",
-    progress: "60",
+    progress: "70",
   },
   {
     id: 4,
     title: "python",
-    progress: "40",
+    progress: "30",
   },
   {
     id: 5,
     title: "php",
-    progress: "30",
+    progress: "50",
   },
   {
     id: 6,
@@ -158,47 +158,47 @@ export const services = [
     id: 1,
     title: "UI/UX Design",
     icon: penIcon,
-    projects: 110,
+    projects: 11,
   },
   {
     id: 2,
     title: "web development",
     icon: codeIcon,
-    projects: 221,
+    projects: 154,
   },
   {
     id: 3,
     title: "branding",
     icon: loudSpeakerIcon,
-    projects: 40,
+    projects: 0,
   },
   {
     id: 4,
     title: "logo design",
     icon: peopleIcon,
-    projects: 331,
+    projects: 3,
   },
 ];
 export const achievements = [
   {
     id: 1,
     title: "years of experience",
-    count: 9,
+    count: 1,
   },
   {
     id: 2,
     title: "satisfied customers",
-    count: 200,
+    count: 0,
   },
   {
     id: 3,
     title: "design items",
-    count: 734,
+    count: 30,
   },
   {
     id: 4,
     title: "client served",
-    count: 124,
+    count: 0,
   },
 ];
 export const plans = [
@@ -208,7 +208,7 @@ export const plans = [
     price: "99",
     info: [
       "HTML / CSS",
-      "desktop and mobile support",
+      "desktop & mobile support",
       "no animations",
       "custom domain",
       "single page application",
@@ -217,9 +217,9 @@ export const plans = [
   {
     id: 2,
     name: "static site",
-    price: "120",
+    price: "180",
     info: [
-      "HTML / CSS",
+      "React",
       "full responsive",
       "simple animations",
       "custom domain",
@@ -231,7 +231,7 @@ export const plans = [
   {
     id: 3,
     name: "full functional static site",
-    price: "160",
+    price: "250",
     info: [
       "react",
       "full responsive",

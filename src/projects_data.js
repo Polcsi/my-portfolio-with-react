@@ -19,7 +19,7 @@ export const projects = [
     cover: glass,
     url: "https://sign-up4525.netlify.app",
     date: "2021.09.17.",
-    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
+    info: "This is a login and sign up page. You can't login. You can't register it is just a prensentation. The page you can see an Animated linear gradient background changing colors. Center of the page you see a glassmorphism card which has a button on the right side that flip the card and you can see the login form. On the sign up form a JavaScript function check the given password match. If not match the inputs color change red while not equal both passwords. Finally passwords input contains an eye icon which you can trigger by clicking and it will change the input type from password to text so you will see what you typed. It is not fully responsive so there are some problems with different screen sizes.\n I created this form for to learn 3d animation in CSS and it was a challenge to me to interact password inputs fields. Below the link you can see this project in the browser I deployed it to demonstrate other devices and share with my friends.",
   },
   {
     id: 2,
