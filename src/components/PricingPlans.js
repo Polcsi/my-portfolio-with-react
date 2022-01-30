@@ -108,7 +108,10 @@ const PricingPlans = () => {
               ? "nextCard"
               : "hideRightCard";
           return (
-            <article className={`pricing-plan ${position}`} key={id}>
+            <article
+              className={`pricing-plan disable-select ${position}`}
+              key={id}
+            >
               <div className="pricing-card-header">
                 <h3>{name}</h3>
                 <h1>€{price}</h1>
@@ -136,7 +139,7 @@ const PricingPlans = () => {
         {plans.map((plan) => {
           const { id, name, price, info } = plan;
           return (
-            <article className="pricing-plan" key={id}>
+            <article className="pricing-plan disable-select" key={id}>
               <div className="pricing-card-header">
                 <h3>{name}</h3>
                 <h1>€{price}</h1>

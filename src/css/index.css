@@ -77,6 +77,12 @@ body {
   --fixed-width: 620px;
 }
 
+.disable-select {
+  user-select:none;
+  -moz-user-select:none;
+  -webkit-touch-callout:none;
+  -ms-user-select:none;
+}
 .section {
   padding: 13vh 0;
 }

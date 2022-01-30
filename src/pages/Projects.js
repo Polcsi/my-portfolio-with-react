@@ -147,7 +147,7 @@ const Projects = () => {
             >
               <div className="fade-left"></div>
               <div className="fade-right"></div>
-              <div className="categories" ref={categoriesRef}>
+              <div className="categories disable-select" ref={categoriesRef}>
                 {categories.map((category, index) => {
                   return (
                     <button

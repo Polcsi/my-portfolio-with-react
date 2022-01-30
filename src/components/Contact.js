@@ -28,6 +28,7 @@ const Contact = () => {
                 setCopy(true);
               }}
               title={platform}
+              className="disable-select"
             >
               {icon}
               <p>{text}</p>

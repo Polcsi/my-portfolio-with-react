@@ -261,7 +261,6 @@
 }
 
 /* Pricing Section */
-
 .pricing-section {
   background-color: var(--gray-primary-6);
 }
@@ -516,6 +515,7 @@
   text-align: center;
   padding: 1.5rem 1.7rem;
   width: auto;
+  cursor: pointer;
 }
 .contact-cards article svg {
   font-size: clamp(1.6rem, 1.7vw, 2rem);
