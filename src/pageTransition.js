@@ -77,10 +77,13 @@ export const main = {
 const textContainer = {
   initial: {
     opacity: 1,
+    display: "flex",
   },
   animate: {
     opacity: 0,
+    display: "none",
     transition: {
+      display: { delay: 0.5 },
       duration: 0.25,
       when: "afterChildren",
     },

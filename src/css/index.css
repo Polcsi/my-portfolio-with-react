@@ -77,6 +77,10 @@ body {
   --fixed-width: 620px;
 }
 
+.skills-section.lazy {
+   background-image: none;
+   background-color: #F1F1FA;
+}
 .disable-select {
   user-select:none;
   -moz-user-select:none;
@@ -238,9 +242,10 @@ body {
   align-items: center;
 }
 .absolute {
-  position: absolute;
+  position: fixed;
   z-index: 2000;
   width: 100%;
+  backface-visibility: hidden;
 }
 body.overflow-hidden  {
   overflow: hidden !important;
