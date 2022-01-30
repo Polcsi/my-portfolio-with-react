@@ -60,7 +60,7 @@ const Projects = () => {
         offset = (isTouchEvent ? e.touches[0].clientX : e.clientX) - initialX;
 
         if (offset >= 25) {
-          categoriesRef.current.style.left = "15px";
+          categoriesRef.current.style.left = "18px";
         } else if (offset <= categoriesEnd) {
           categoriesRef.current.style.left = `${categoriesEnd}px`;
         } else {
@@ -140,12 +140,11 @@ const Projects = () => {
                 done.
               </p>
             </motion.div>
-            <div className="arrow-align">
+            <motion.div className="arrow-align" variants={secondaryTitle}>
               <RiArrowLeftCircleLine className="left-circle-arrow" />
               <RiArrowRightCircleLine className="right-circle-arrow" />
-              <motion.div
+              <div
                 className="categories-container"
-                variants={secondaryTitle}
                 onMouseDown={onPointerEvent}
                 onTouchStart={onPointerEvent}
               >
@@ -172,8 +171,8 @@ const Projects = () => {
                     );
                   })}
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </div>
           <motion.div variants={main} className="featured-project-list">
             <ProjectList amount={amount} filter={true} />

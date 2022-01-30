@@ -368,11 +368,11 @@
     }
     .left-circle-arrow {
         transform: translate(-50%, 50%);
-        left: 3px;
+        left: 5px;
     }
     .right-circle-arrow {
         transform: translate(50%, 50%);
-        right: 3px;
+        right: 5px;
     }
     .categories-container {
         place-self: center;
