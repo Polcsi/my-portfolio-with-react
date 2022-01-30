@@ -110,9 +110,18 @@
     .info article .info-text {
         font-size: clamp(.7rem, 1vw, .9rem);
     }
+    .skills-section.lazy {
+        background-image: none;
+        background-color: var(--gray-primary-3);
+    }
     .skills-section {
-        background-size: cover;
-        background-attachment: scroll;
+        background-size: contain;
+        background-attachment: unset;
+        background-image: none;
+        background: var(--gray-primary-3);
+    }
+    .skills-section-overlay {
+        background: none;
     }
     .skills-container {
         gap: 1rem;
@@ -123,6 +132,9 @@
     }
     .skills-container article .percentage span {
         font-size: clamp(.7rem, 1.4vw, .9rem);
+    }
+    .progress-bar {
+        box-shadow: var(--green-primary-3-shadow-4) 5px 5px, var(--green-primary-3-shadow-3) 10px 10px, var(--green-primary-3-shadow-2) 15px 15px, var(--green-primary-3-shadow-1) 20px 20px;
     }
     .section-header h2 {
         font-size: clamp(.9rem, 1.4vw, 1.3rem);
