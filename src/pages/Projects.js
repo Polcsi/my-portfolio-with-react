@@ -3,6 +3,7 @@ import { useGlobalContext } from "../context";
 import "../css/projects.css";
 import ProjectList from "../components/ProjectList";
 import Navbar from "../components/Navbar";
+import { RiArrowLeftCircleLine, RiArrowRightCircleLine } from "react-icons/ri";
 import {
   InitialTransition,
   title,
@@ -59,7 +60,7 @@ const Projects = () => {
         offset = (isTouchEvent ? e.touches[0].clientX : e.clientX) - initialX;
 
         if (offset >= 25) {
-          categoriesRef.current.style.left = "30px";
+          categoriesRef.current.style.left = "15px";
         } else if (offset <= categoriesEnd) {
           categoriesRef.current.style.left = `${categoriesEnd}px`;
         } else {
@@ -139,36 +140,40 @@ const Projects = () => {
                 done.
               </p>
             </motion.div>
-            <motion.div
-              className="categories-container"
-              variants={secondaryTitle}
-              onMouseDown={onPointerEvent}
-              onTouchStart={onPointerEvent}
-            >
-              <div className="fade-left"></div>
-              <div className="fade-right"></div>
-              <div className="categories disable-select" ref={categoriesRef}>
-                {categories.map((category, index) => {
-                  return (
-                    <button
-                      className={
-                        active === category
-                          ? "category-btn active-category"
-                          : "category-btn"
-                      }
-                      disabled={active === category ? "disabled" : ""}
-                      key={index}
-                      onClick={() => {
-                        filterProjects(category);
-                        setActive(category);
-                      }}
-                    >
-                      {category}
-                    </button>
-                  );
-                })}
-              </div>
-            </motion.div>
+            <div className="arrow-align">
+              <RiArrowLeftCircleLine className="left-circle-arrow" />
+              <RiArrowRightCircleLine className="right-circle-arrow" />
+              <motion.div
+                className="categories-container"
+                variants={secondaryTitle}
+                onMouseDown={onPointerEvent}
+                onTouchStart={onPointerEvent}
+              >
+                <div className="fade-left"></div>
+                <div className="fade-right"></div>
+                <div className="categories disable-select" ref={categoriesRef}>
+                  {categories.map((category, index) => {
+                    return (
+                      <button
+                        className={
+                          active === category
+                            ? "category-btn active-category"
+                            : "category-btn"
+                        }
+                        disabled={active === category ? "disabled" : ""}
+                        key={index}
+                        onClick={() => {
+                          filterProjects(category);
+                          setActive(category);
+                        }}
+                      >
+                        {category}
+                      </button>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            </div>
           </div>
           <motion.div variants={main} className="featured-project-list">
             <ProjectList amount={amount} filter={true} />

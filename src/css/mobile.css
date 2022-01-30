@@ -354,10 +354,31 @@
         height: 125vh; 
     }
     /* Projects Page */
-    .categories-container {
+    .arrow-align {
+        margin: auto 0;
+        display: flex;
+        justify-content: center;
         position: relative;
-        width: 100%;
-        height: 40px;
+    }
+    .left-circle-arrow, .right-circle-arrow {
+        position: absolute;
+        color: white;
+        font-size: 1.15rem;
+        
+    }
+    .left-circle-arrow {
+        transform: translate(-50%, 50%);
+        left: 3px;
+    }
+    .right-circle-arrow {
+        transform: translate(50%, 50%);
+        right: 3px;
+    }
+    .categories-container {
+        place-self: center;
+        position: relative;
+        width: 90%;
+        height: 35px;
         overflow: hidden;
     }
     .fade-left, .fade-right {
@@ -365,8 +386,10 @@
         position: absolute;
         z-index: 100;
         top: 0;
-        height: 40px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
+        color: var(--text-color);
+        font-size: 1.2rem;
     }
     .fade-left {
         background: linear-gradient(to right, rgba(44,44,44,1), rgba(44,44,44,0));
@@ -383,7 +406,7 @@
         align-items: unset;
         gap: .9rem;
         position: absolute;
-        left: 18px;
+        left: 10px;
         cursor: grab;
     }
     .category-btn {
