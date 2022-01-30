@@ -1,40 +1,45 @@
 import React from "react";
 import { skillsInfo } from "../data";
+import { useGlobalContext } from "../context";
 
 const Skills = () => {
+  const { checkSize } = useGlobalContext();
+
   React.useEffect(() => {
-    var lazyloadImages;
+    if (!checkSize(window.innerWidth, window.innerHeight)) {
+      var lazyloadImages;
 
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
+      var lazyloadThrottleTimeout;
+      lazyloadImages = document.querySelectorAll(".lazy");
 
-    function lazyload() {
-      if (lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
+      function lazyload() {
+        if (lazyloadThrottleTimeout) {
+          clearTimeout(lazyloadThrottleTimeout);
+        }
+
+        lazyloadThrottleTimeout = setTimeout(function () {
+          var scrollTop = window.pageYOffset;
+          lazyloadImages.forEach(function (img) {
+            if (img.offsetTop < window.innerHeight + scrollTop + 600) {
+              console.log("Load Image");
+              img.src = img.dataset.src;
+              img.classList.remove("lazy");
+            }
+          });
+        }, 200);
       }
 
-      lazyloadThrottleTimeout = setTimeout(function () {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function (img) {
-          if (img.offsetTop < window.innerHeight + scrollTop + 600) {
-            console.log("Load Image");
-            img.src = img.dataset.src;
-            img.classList.remove("lazy");
-          }
-        });
-      }, 200);
+      document.addEventListener("scroll", lazyload);
+      window.addEventListener("resize", lazyload);
+      window.addEventListener("orientationChange", lazyload);
+      return (_) => {
+        console.log("clear");
+        document.removeEventListener("scroll", lazyload);
+        window.removeEventListener("resize", lazyload);
+        window.removeEventListener("orientationChange", lazyload);
+      };
     }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-    return (_) => {
-      console.log("clear");
-      document.removeEventListener("scroll", lazyload);
-      window.removeEventListener("resize", lazyload);
-      window.removeEventListener("orientationChange", lazyload);
-    };
-  }, []);
+  }, [checkSize]);
 
   return (
     <section className="skills-section lazy" name="skills">

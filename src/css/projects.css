@@ -11,6 +11,9 @@
 .arrow-align {
   margin: auto 0;
 }
+.left-circle-arrow, .right-circle-arrow {
+    display: none;
+}
 .projects-page-container {
     display: grid;
     gap: 4rem;
