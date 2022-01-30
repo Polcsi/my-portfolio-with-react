@@ -364,7 +364,7 @@
         position: absolute;
         color: white;
         font-size: 1.15rem;
-        
+        cursor: pointer;
     }
     .left-circle-arrow {
         transform: translate(-50%, 50%);
@@ -408,6 +408,8 @@
         position: absolute;
         left: 10px;
         cursor: grab;
+        will-change: left;
+        transition: left .1s ease;
     }
     .category-btn {
         border: 2px solid var(--green-primary) !important;

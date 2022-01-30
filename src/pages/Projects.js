@@ -35,6 +35,16 @@ const Projects = () => {
 
   useResize();
 
+  const slideFullLeft = () => {
+    categoriesRef.current.style.left = "18px";
+  };
+
+  const slideFullRight = () => {
+    let categoriesWidth = categoriesRef.current.getBoundingClientRect().width;
+    let categoriesEnd = -(categoriesWidth / (categories.length / 2));
+    categoriesRef.current.style.left = `${categoriesEnd}px`;
+  };
+
   const onPointerEvent = (e) => {
     if (
       addTouchEventListener ||
@@ -60,9 +70,9 @@ const Projects = () => {
         offset = (isTouchEvent ? e.touches[0].clientX : e.clientX) - initialX;
 
         if (offset >= 25) {
-          categoriesRef.current.style.left = "18px";
+          slideFullLeft();
         } else if (offset <= categoriesEnd) {
-          categoriesRef.current.style.left = `${categoriesEnd}px`;
+          slideFullRight();
         } else {
           categoriesRef.current.style.left = offset + "px";
         }
@@ -141,8 +151,14 @@ const Projects = () => {
               </p>
             </motion.div>
             <motion.div className="arrow-align" variants={secondaryTitle}>
-              <RiArrowLeftCircleLine className="left-circle-arrow" />
-              <RiArrowRightCircleLine className="right-circle-arrow" />
+              <RiArrowLeftCircleLine
+                onClick={() => slideFullLeft()}
+                className="left-circle-arrow"
+              />
+              <RiArrowRightCircleLine
+                onClick={() => slideFullRight()}
+                className="right-circle-arrow"
+              />
               <div
                 className="categories-container"
                 onMouseDown={onPointerEvent}
