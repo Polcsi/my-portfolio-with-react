@@ -11,10 +11,12 @@ import Error from "./pages/Error";
 // import components
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import PullToRefresh from "./components/PullToRefresh";
 
 function App() {
   return (
     <div className="app">
+      <PullToRefresh />
       <Router>
         <ScrollToTop>
           <AnimatePresence>

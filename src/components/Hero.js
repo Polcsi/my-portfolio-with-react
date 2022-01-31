@@ -63,7 +63,7 @@ const Hero = () => {
       initial="initial"
       animate="animate"
       variants={content}
-      className="hero-container"
+      className="hero-container disable-select"
       name="home"
     >
       <div className="hero-overlay"></div>

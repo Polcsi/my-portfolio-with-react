@@ -1,4 +1,13 @@
 @media all and (max-width: 500px) and (max-height: 920px) {
+    .loading-container .loading {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #fff;
+        border-right-color: #fff;
+        animation: loading 0.5s infinite forwards;
+    }
     .transition-logo {
         width: 60px;
         height: 80px;

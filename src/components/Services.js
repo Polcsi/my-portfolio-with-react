@@ -10,7 +10,7 @@ const Services = () => {
           <h2>services</h2>
           <h1>what i am great at</h1>
         </div>
-        <div className="service-cards">
+        <div className="service-cards disable-select">
           {services.map((item) => {
             const { id, title, icon, projects } = item;
             return (
@@ -22,7 +22,7 @@ const Services = () => {
             );
           })}
         </div>
-        <div className="achievements">
+        <div className="achievements disable-select">
           {achievements.map((item) => {
             const { id, title, count } = item;
             return (

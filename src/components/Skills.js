@@ -50,7 +50,7 @@ const Skills = () => {
             <h1>Skills</h1>
           </div>
           <div className="underline"></div>
-          <div className="skills-container">
+          <div className="skills-container disable-select">
             {skillsInfo.map((skill) => {
               const { id, title, progress } = skill;
               return (
