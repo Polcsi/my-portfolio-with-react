@@ -11,14 +11,20 @@ const About = () => {
         </div>
         <div className="about-text">
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
+            Hi my name is Bence Pollák. I live a little village from south part
+            of Hungary. On middle school when I started to learn programming I
+            felt that I wanna deal with it in the future. So I started teaching
+            myself how to code from the internet and bunch of books I bought.
+            After grammer school I went to university where I started to learn
+            IT Enginnering to become a programmer. So I am still attend to
+            university I am in the foruth semester. I am so exited to start
+            working as a programmer. When I found out what kind of app I would
+            like to develop then I became unstoppable to learn everything about
+            it. And if you didn't guess what kind of programmer I want to be. It
+            is web development. Creating Web Application is my favorite part of
+            building coding projects. If you have questions you can contact me
+            on social media. You find the links in the contact section bottom of
+            the page.
           </p>
         </div>
         <div className="info">

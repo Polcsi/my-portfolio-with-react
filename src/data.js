@@ -106,19 +106,19 @@ export const info = [
     id: 1,
     icon: profileInfoIcon,
     title: "profile",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea",
+    text: "I do not know what should I write here but I guess I need to describe myself. I will draw up shorthly. I love learning new things which helps to me in the future. I am an overthinker person, I don't afraid of talking people. I do and push my tasks until I don't complete it.",
   },
   {
     id: 2,
     icon: addressInfoIcon,
     title: "address",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea",
+    text: "I am from Hungary and I live in Hidas. It is a village far from Budapest. This village is located southest part of Hungary. I grew up in this village. I attended grammer school the neighbor town it's called Bonyhád. And now I attend to University of Dunaújváros.",
   },
   {
     id: 3,
     icon: hobbiesInfoIcon,
     title: "hobbies & interests",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea",
+    text: "First of all creating web applications, automating some easy task on my computer which save time for me. I love to excerising, I almost run everyday. It keeps me and my mind healthy. Lastly I play on guitar I think learning music is the best thing to learn.",
   },
 ];
 export const skillsInfo = [
