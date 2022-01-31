@@ -10,6 +10,7 @@ import keyboardEvents from "./images/projects/keyboardevents.png";
 import blog from "./images/projects/blog.png";
 import blogDashboard from "./images/projects/blog-dashboard.png";
 import loginForm from "./images/projects/simple-login-form.png";
+import personGenerator from "./images/projects/person-generator.png";
 
 export const projects = [
   {
@@ -91,6 +92,15 @@ export const projects = [
     cover: loginForm,
     url: "https://codepen.io/polcsi/pen/ZEaYZxM",
     date: "2021.08.13.",
+    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
+  },
+  {
+    id: 16,
+    title: "person generator",
+    category: "program",
+    cover: personGenerator,
+    url: "https://codepen.io/polcsi/pen/KKyVBzb",
+    date: "2022.01.31",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
   },
   {
