@@ -10,7 +10,7 @@ const PullToRefresh = () => {
     const main = loadingContainerRef.current;
 
     function loading() {
-      console.log("Refresh");
+      console.log("Refresh", isLoading);
       setIsLoading(true);
       document.body.classList.add("overflow-hidden");
       main.style.transform = `translateY(0px)`;
