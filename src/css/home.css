@@ -76,6 +76,7 @@
   display: grid;
   gap: clamp(2rem, 4vw, 6vw);
   place-items: center;
+  width: 100%;
 }
 .section-title h1 {
   text-align: center;
@@ -86,12 +87,13 @@
   letter-spacing: 3px;
 }
 .about-text {
-  width: 70vw;
+  width: 85%;
 }
 .about-text p {
   color: var(--text-color);
   text-align: center;
   font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.7;
 }
 
 .info {
@@ -117,6 +119,7 @@
 }
 .info article .info-text {
   text-align: center;
+  line-height: 1.65;
 }
 
 /* Skills Section */
