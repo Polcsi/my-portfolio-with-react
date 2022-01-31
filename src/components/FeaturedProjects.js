@@ -29,10 +29,10 @@ const FeaturedProjects = () => {
         <div className="work-together-card">
           <h1>let's work together on your next project</h1>
           <p className="work-together-card-txt">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea
+            I trully would be happy if I could create a website with you. If you
+            want to just order a website choose a plan in the pricing section
+            and write a message in the contact page. Write the plan name in the
+            message and we will discuss everything about it.
           </p>
           <Link
             className="btn white-border-btn work-together-card-btn"
