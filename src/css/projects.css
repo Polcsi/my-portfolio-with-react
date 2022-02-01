@@ -99,10 +99,6 @@
   height: var(--total-size);
   /* animation: rotate 2s infinite; */
 }
-@keyframes rotate {
-    from { transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-}
 .mosaic-loader > .cell {
   --cell-color: white;
   flex: 0 0 var(--cell-size);

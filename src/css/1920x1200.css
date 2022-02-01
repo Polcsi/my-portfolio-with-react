@@ -1,17 +1,17 @@
-@media all and (max-width:1920px) and (max-height:1080px) {
+@media all and (max-width: 1920px) and (max-height: 1200px) {
     /* nav */
     .navbar{
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 2.5rem 1rem 1rem 1rem;
     }
     .navbar.sticky{
-        padding: 1rem 1rem 1.2rem 1rem !important;
+        padding: 1.5rem 1rem 1.2rem 1rem !important;
     }
     .logo img {
-        width: 53px;
+        width: 58px;
     }
     .menu-list li a {
-        font-size: clamp(1rem, 1.1vw, 1.6rem);
-        padding: .3rem 0;
+        font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+        padding: .5rem 0;
     }
     .menu-list li a::before {
         height: 3px;
@@ -23,27 +23,15 @@
         transform: translate(-50%, -50%);
         width: clamp(30px, 2.2vw, 40px);
     }
-    .about-text p {
-        font-size: clamp(.8rem, 1.4vw, 1rem);
-    }
     .info {
         gap: 4rem;
-        padding: 3rem;
+        padding: 5rem;
         width: 100%;
         justify-content: space-evenly;
     }
-    .info-icon {
-        width: clamp(70px, 10vw, 90px);
-    }
     .info article {
         width: 400px;
-        grid-gap: 1.3rem;
-    }
-    .info article .info-title {
-        font-size: clamp(1.2rem, 1.5vw, 1.4rem);
-    }
-    .info article .info-text {
-        font-size: clamp(.7rem, 1vw, .9rem);
+        grid-gap: 1.6rem;
     }
     .plans {
         gap: 3rem;
