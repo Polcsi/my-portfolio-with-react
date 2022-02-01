@@ -3,7 +3,7 @@ import { useGlobalContext } from "../context";
 import "../css/projects.css";
 import ProjectList from "../components/ProjectList";
 import Navbar from "../components/Navbar";
-import { RiArrowLeftCircleLine, RiArrowRightCircleLine } from "react-icons/ri";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import {
   InitialTransition,
   title,
@@ -151,11 +151,11 @@ const Projects = () => {
               </p>
             </motion.div>
             <motion.div className="arrow-align" variants={secondaryTitle}>
-              <RiArrowLeftCircleLine
+              <IoIosArrowBack
                 onClick={() => slideFullLeft()}
                 className="left-circle-arrow"
               />
-              <RiArrowRightCircleLine
+              <IoIosArrowForward
                 onClick={() => slideFullRight()}
                 className="right-circle-arrow"
               />

@@ -44,7 +44,7 @@ const PullToRefresh = () => {
       }
       let changeY = pStart.y < pCurrent.y ? Math.abs(pStart.y - pCurrent.y) : 0;
       if (window.pageYOffset === 0) {
-        if (changeY > 100) loading();
+        if (changeY > 200) loading();
       }
     }
     document.addEventListener("touchstart", (e) => swipeStart(e), false);
