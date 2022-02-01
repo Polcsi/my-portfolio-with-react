@@ -39,15 +39,4 @@
         width: var(--total-size);
         height: var(--total-size);
     }
-    /* Contact Page */
-    .contact-page-container {
-        display: grid;
-        grid-template-areas:
-            'title map'
-            'form map';
-        grid-gap: 3rem 8rem;
-        width: 100%;
-        max-width: 1700px;
-        margin: auto;
-    }
 }
