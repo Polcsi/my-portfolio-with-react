@@ -151,14 +151,20 @@ const Projects = () => {
               </p>
             </motion.div>
             <motion.div className="arrow-align" variants={secondaryTitle}>
-              <IoIosArrowBack
-                onClick={() => slideFullLeft()}
+              <div
                 className="left-circle-arrow"
-              />
-              <IoIosArrowForward
-                onClick={() => slideFullRight()}
+                onClick={() => slideFullLeft()}
+              >
+                <IoIosArrowBack />
+              </div>
+
+              <div
                 className="right-circle-arrow"
-              />
+                onClick={() => slideFullRight()}
+              >
+                <IoIosArrowForward />
+              </div>
+
               <div
                 className="categories-container"
                 onMouseDown={onPointerEvent}

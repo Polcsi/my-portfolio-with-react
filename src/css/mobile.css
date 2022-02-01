@@ -384,17 +384,21 @@
     .left-circle-arrow, .right-circle-arrow {
         display: unset;
         position: absolute;
+        top: 0;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .left-circle-arrow svg, .right-circle-arrow svg {
         color: white;
         font-size: 1.15rem;
-        cursor: pointer;
     }
     .left-circle-arrow {
-        transform: translate(-50%, 50%);
-        left: 5px;
+        left: -2px;
     }
     .right-circle-arrow {
-        transform: translate(50%, 50%);
-        right: 5px;
+        right: -2px;
     }
     .categories-container {
         place-self: center;
@@ -512,6 +516,17 @@
     }
     .project-info-section a:hover {
         color: var(--green-primary);
+    }
+    .mosaic-loader {
+        --cell-size: 14px;
+        --cell-spacing: .5px;
+        --border-width: 1px;
+        --cells: 3;
+        --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+        display: flex;
+        flex-wrap: wrap;
+        width: var(--total-size);
+        height: var(--total-size);
     }
      /* footer */
     footer {

@@ -7,6 +7,17 @@
         font-size: clamp(.7rem, .8vw, 1rem) !important;
         padding: clamp(8px, 1.5vw ,10px) clamp(25px, 6vw, 35px) !important;
     }
+    .mosaic-loader {
+        --cell-size: 16px;
+        --cell-spacing: .5px;
+        --border-width: 1px;
+        --cells: 3;
+        --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+        display: flex;
+        flex-wrap: wrap;
+        width: var(--total-size);
+        height: var(--total-size);
+    }
     /* nav */
     .navbar{
         padding: 2rem 1rem 1rem 1rem;
@@ -151,10 +162,10 @@
         font-size: clamp(.8rem, 1vw, 1rem);
     }
     .work-together-card {
-    background-color: var(--gray-primary-2);
-    padding: 3rem 4rem;
-    width: 86%;
-    gap: 1.5rem clamp(1rem, 3vw, 5rem);
+        background-color: var(--gray-primary-2);
+        padding: 3rem 4rem;
+        width: 86%;
+        gap: 1.5rem clamp(1rem, 3vw, 5rem);
     }
     /* footer */
     .upper-layer {

@@ -97,7 +97,6 @@
   flex-wrap: wrap;
   width: var(--total-size);
   height: var(--total-size);
-  /* animation: rotate 2s infinite; */
 }
 .mosaic-loader > .cell {
   --cell-color: white;

@@ -253,4 +253,15 @@
     .project-info-section a {
         font-size: clamp(.8rem, 1vw, 1.1rem);
     }
+    .mosaic-loader {
+        --cell-size: 17px;
+        --cell-spacing: .5px;
+        --border-width: 1px;
+        --cells: 3;
+        --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+        display: flex;
+        flex-wrap: wrap;
+        width: var(--total-size);
+        height: var(--total-size);
+    }
 }

@@ -272,6 +272,17 @@
     .project-body a svg {
         font-size: clamp(.7rem, 1vw, 1.1em);
     }
+    .mosaic-loader {
+        --cell-size: 15px;
+        --cell-spacing: .5px;
+        --border-width: 1px;
+        --cells: 3;
+        --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+        display: flex;
+        flex-wrap: wrap;
+        width: var(--total-size);
+        height: var(--total-size);
+    }
     /* Project Page */
     .project-info-section {
         margin: 0 0;
