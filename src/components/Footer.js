@@ -5,6 +5,7 @@ import { social } from "../data";
 import { BsFillHeartFill } from "react-icons/bs";
 
 const Footer = () => {
+  const currentDate = new Date();
   return (
     <footer>
       <div className="upper-layer">
@@ -31,7 +32,7 @@ const Footer = () => {
       </div>
       <div className="down-layer">
         <span>&copy;</span>
-        <span>2021</span>
+        <span>{currentDate.getFullYear()}</span>
         <span>polcsicode.com</span>
         <span>all rights reserved</span>
       </div>
