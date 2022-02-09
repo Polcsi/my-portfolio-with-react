@@ -127,7 +127,7 @@
         background-size: contain;
         background-attachment: unset;
         background-image: none;
-        background: var(--gray-primary-3);
+        background: var(--gray-primary-6);
     }
     .skills-section-overlay {
         background: none;

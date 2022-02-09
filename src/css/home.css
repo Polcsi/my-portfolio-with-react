@@ -127,11 +127,11 @@
 .skills-section {
   width: 100%;
   min-height: 100%;
-   background: url("../images/skills-background.webp");
+  background: url("../images/skills-background.webp");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: unset;
   position: relative;
   color: var(--text-color);
   -webkit-transform: translate3d(0, 0, 0);
@@ -177,7 +177,7 @@
   'progress progress';
 }
 .progress-bar {
-  background-color: var(--gray-primary-6);
+  background-color: var(--gray-primary-4);
   width: 100%;
   height: clamp(2.5rem, 2.5vw, 3.13rem);
   position: relative;
@@ -188,6 +188,7 @@
   background-color: var(--green-primary);
   width: 50%;
   height: clamp(2.5rem, 2.5vw, 3.13rem);
+  transition: width .2s ease;
 }
 .skills-container article .title h3{
   font-weight: 500;

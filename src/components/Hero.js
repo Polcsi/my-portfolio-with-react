@@ -4,6 +4,7 @@ import scrollIcon from "../icons/scroll-icon.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { title, content, main, secondaryTitle } from "../pageTransition";
+import { dataRotate } from "../data";
 
 const Hero = () => {
   const rotate = useRef(null);
@@ -57,6 +58,11 @@ const Hero = () => {
       new TxtRotate(rotate.current, JSON.parse(toRotate), period);
     }
   }, []);
+  const dataHero = dataRotate
+    .map((item) => {
+      return `"${item}"`;
+    })
+    .join(", ");
 
   return (
     <motion.div
@@ -75,7 +81,7 @@ const Hero = () => {
               ref={rotate}
               className="txt-rotate"
               data-period="2000"
-              data-rotate='[ "web developer", "UX & UI Designer", "frontend developer", "backend developer", "IT engineer" ]'
+              data-rotate={`[ ${dataHero} ]`}
             ></span>
           </motion.h1>
           <motion.div variants={main}>

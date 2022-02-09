@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { plans } from "../data";
 import { useGlobalContext } from "../context";
 import { useResize } from "../useResize";
+import { motion } from "framer-motion";
 
 const PricingPlans = () => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -90,10 +91,19 @@ const PricingPlans = () => {
 
   if (addTouchEventListener || checkSize(dimensions.width, dimensions.height)) {
     return (
-      <div
+      <motion.div
         className="plans"
         onTouchStart={onPointerEvent}
         onMouseDown={onPointerEvent}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          duration: 1,
+          bounce: 0.5,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: true, amount: 0.3 }}
       >
         {plans.map((plan, index) => {
           const { id, name, price, info } = plan;
@@ -131,15 +141,27 @@ const PricingPlans = () => {
             </article>
           );
         })}
-      </div>
+      </motion.div>
     );
   } else {
     return (
       <div className="plans">
-        {plans.map((plan) => {
+        {plans.map((plan, index) => {
           const { id, name, price, info } = plan;
           return (
-            <article className="pricing-plan disable-select" key={id}>
+            <motion.article
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: index * 0.7,
+                duration: 1,
+                bounce: 0.5,
+                ease: "easeInOut",
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="pricing-plan disable-select"
+              key={id}
+            >
               <div className="pricing-card-header">
                 <h3>{name}</h3>
                 <h1>€{price}</h1>
@@ -156,7 +178,7 @@ const PricingPlans = () => {
                   return <li key={index}>{item}</li>;
                 })}
               </ul>
-            </article>
+            </motion.article>
           );
         })}
       </div>

@@ -17,6 +17,15 @@ import codeIcon from "./icons/code.svg";
 import loudSpeakerIcon from "./icons/loud_speaker.svg";
 import peopleIcon from "./icons/People.svg";
 
+export const dataRotate = [
+  "web developer",
+  "UX & UI Designer",
+  "frontend developer",
+  "backend developer",
+  "IT engineer",
+  "full stack developer",
+];
+
 export const social = [
   {
     id: 1,
@@ -151,6 +160,16 @@ export const skillsInfo = [
     id: 6,
     title: "adobe xd",
     progress: "90",
+  },
+  {
+    id: 7,
+    title: "node js",
+    progress: "40",
+  },
+  {
+    id: 8,
+    title: "mysql",
+    progress: "60",
   },
 ];
 export const services = [

@@ -1,15 +1,22 @@
 import React from "react";
 import { info } from "../data";
+import { motion } from "framer-motion";
+import { revealText, revealInfoCard } from "./ScrollTriggeredAnimations";
 
 const About = () => {
   return (
     <section className="section-container about-section section" name="about">
-      <div className="about-section-grid">
+      <motion.div
+        className="about-section-grid"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {" "}
-        <div className="section-title">
+        <motion.div className="section-title" variants={revealText}>
           <h1>About me</h1>
-        </div>
-        <div className="about-text">
+        </motion.div>
+        <motion.div className="about-text" variants={revealText}>
           <p>
             Hi my name is Bence Pollák. I live a little village from south part
             of Hungary. On middle school when I started to learn programming I
@@ -26,20 +33,25 @@ const About = () => {
             on social media. You find the links in the contact section bottom of
             the page.
           </p>
-        </div>
-        <div className="info">
+        </motion.div>
+        <motion.div
+          className="info"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           {info.map((item) => {
             const { id, icon, title, text } = item;
             return (
-              <article key={id}>
+              <motion.article variants={revealInfoCard} key={id}>
                 <img className="info-icon" src={icon} alt={`${title}-svg`} />
                 <h2 className="info-title">{title}</h2>
                 <p className="info-text">{text}</p>
-              </article>
+              </motion.article>
             );
           })}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
