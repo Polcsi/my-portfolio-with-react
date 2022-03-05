@@ -36,12 +36,12 @@ const Projects = () => {
   useResize();
 
   const slideFullLeft = () => {
-    categoriesRef.current.style.left = "18px";
+    categoriesRef.current.style.left = "25px";
   };
 
   const slideFullRight = () => {
     let categoriesWidth = categoriesRef.current.getBoundingClientRect().width;
-    let categoriesEnd = -(categoriesWidth / (categories.length / 2));
+    let categoriesEnd = (categoriesWidth * -categories.length) / 10;
     categoriesRef.current.style.left = `${categoriesEnd}px`;
   };
 
@@ -53,8 +53,10 @@ const Projects = () => {
       let isTouchEvent = e.type === "touchstart" ? true : false;
       let offset = 0;
       let initialX = isTouchEvent ? e.touches[0].clientX : e.clientX;
+      let start = 0;
 
       if (isTouchEvent) {
+        document.ontouchstart = startTouch;
         document.ontouchmove = onPointerMove;
         document.ontouchend = onPointerEnd;
       } else {
@@ -62,12 +64,20 @@ const Projects = () => {
         document.onmouseup = onPointerEnd;
       }
 
+      function startTouch(e) {
+        let actualPos = e.path[1].style.left;
+        let value = actualPos.substring(0, actualPos.length - 2);
+        start = parseFloat(value);
+      }
+
       function onPointerMove(e) {
         let categoriesWidth =
           categoriesRef.current.getBoundingClientRect().width;
-        let categoriesEnd = -(categoriesWidth / (categories.length / 2));
+        let categoriesEnd = (categoriesWidth * -categories.length) / 10;
 
-        offset = (isTouchEvent ? e.touches[0].clientX : e.clientX) - initialX;
+        offset =
+          start +
+          ((isTouchEvent ? e.touches[0].clientX : e.clientX) - initialX);
 
         if (offset >= 25) {
           slideFullLeft();
@@ -172,7 +182,11 @@ const Projects = () => {
               >
                 <div className="fade-left"></div>
                 <div className="fade-right"></div>
-                <div className="categories disable-select" ref={categoriesRef}>
+                <div
+                  className="categories disable-select"
+                  ref={categoriesRef}
+                  style={{ left: "25px" }}
+                >
                   {categories.map((category, index) => {
                     return (
                       <button
