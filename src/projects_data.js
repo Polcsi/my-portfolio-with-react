@@ -11,6 +11,8 @@ import blog from "./images/projects/blog.png";
 import blogDashboard from "./images/projects/blog-dashboard.png";
 import loginForm from "./images/projects/simple-login-form.png";
 import personGenerator from "./images/projects/person-generator.png";
+import dontLetFallTheBall from "./images/projects/donotletfalltheball.png";
+import tictactoe from "./images/projects/tictactoe.png";
 
 export const projects = [
   {
@@ -128,6 +130,24 @@ export const projects = [
     cover: keyboardEvents,
     url: "https://codepen.io/polcsi/full/BawXaeY",
     date: "2021.08.15.",
+    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
+  },
+  {
+    id: 13,
+    title: "don't let fall the ball",
+    category: "game",
+    cover: dontLetFallTheBall,
+    url: "https://festive-allen-8cb483.netlify.app/",
+    date: "2022.03.05.",
+    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
+  },
+  {
+    id: 14,
+    title: "tic tac toe",
+    category: "game",
+    cover: tictactoe,
+    url: "https://tic-tac-toe-prototype.netlify.app/",
+    date: "2022.03.01.",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
   },
 ];
