@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Project from "./pages/Project";
 import Error from "./pages/Error";
+import Tutoring from "./pages/Tutoring";
 
 // import components
 import Footer from "./components/Footer";
@@ -24,7 +25,8 @@ function App() {
               <Route path="/" element={<Home />}></Route>
               <Route path="/contact" element={<Contact />}></Route>
               <Route path="/projects" element={<Projects />}></Route>
-              <Route path="/projects/project/:id" element={<Project />}></Route>
+              <Route path="/projects/:id" element={<Project />}></Route>
+              <Route path="/tutoring" element={<Tutoring />}></Route>
               <Route path="/error" element={<Error />}></Route>
               <Route path="/*" element={<Error />}></Route>
             </Routes>

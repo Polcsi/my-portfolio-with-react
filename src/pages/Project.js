@@ -33,6 +33,11 @@ const Project = () => {
           links={[
             { title: "home", type: "route", url: "/" },
             { title: "projects", type: "route", url: "/projects" },
+            {
+              title: "tutoring",
+              type: "route",
+              url: "/tutoring",
+            },
             { title: "contact", type: "route", url: "/contact" },
           ]}
         />

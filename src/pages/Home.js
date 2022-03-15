@@ -24,6 +24,12 @@ const Home = () => {
           { title: "services", type: "scroll", active: false },
           { title: "pricing", type: "scroll", active: false },
           { title: "projects", type: "scroll", active: false },
+          {
+            title: "tutoring",
+            type: "route",
+            url: "/tutoring",
+            active: false,
+          },
           { title: "contact", type: "route", url: "/contact", active: false },
         ]}
       />

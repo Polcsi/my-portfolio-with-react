@@ -148,6 +148,12 @@ const Projects = () => {
               url: "/projects",
               active: true,
             },
+            {
+              title: "tutoring",
+              type: "route",
+              url: "/tutoring",
+              active: false,
+            },
             { title: "contact", type: "route", url: "/contact", active: false },
           ]}
         />

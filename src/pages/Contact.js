@@ -122,12 +122,16 @@ const Contact = () => {
       <div className="contact-page">
         <Navbar
           links={[
-            { title: "home", type: "route", url: "/", active: false },
+            { title: "home", type: "route", url: "/" },
             {
               title: "projects",
               type: "route",
               url: "/projects",
-              active: false,
+            },
+            {
+              title: "tutoring",
+              type: "route",
+              url: "/tutoring",
             },
             { title: "contact", type: "route", url: "/contact", active: true },
           ]}

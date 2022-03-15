@@ -15,7 +15,7 @@ const ProjectList = ({ amount, filter }) => {
         </div>
         <div className="project-body">
           <h1>{title}</h1>
-          <Link to={`/projects/project/${id}`}>
+          <Link to={`/projects/${id}`}>
             know more <FaArrowRight />
           </Link>
         </div>
