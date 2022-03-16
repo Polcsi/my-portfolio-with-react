@@ -1,0 +1,129 @@
+.tutoring-page {
+  width: 100%;
+  height: auto;
+}
+.tutoring-page-container {
+  width: 95%;
+  height: 100vh;
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 15vh;
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-areas:
+    "header grapics"
+    "scrollIcon scrollIcon";
+  grid-gap: 4rem 0;
+  position: relative;
+}
+.tutoring-page-header {
+  display: grid;
+  gap: 1.5rem;
+  width: 95%;
+  max-width: 600px;
+  grid-area: header;
+}
+.tutoring-page-header .titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.tutoring-page-header .titles h1 {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 5.3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 0;
+  margin: 0 0 12rem 0;
+  position: relative;
+}
+.tutoring-page-header .titles h1::before {
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  content: "tutoring";
+  color: var(--green-primary);
+}
+.tutoring-page-header .titles h1::after {
+  position: absolute;
+  top: 12rem;
+  left: 0;
+  content: "services";
+}
+.tutoring-page-header p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  text-align: left;
+  line-height: 1.8;
+}
+.tutoring-page-header a {
+  place-self: start;
+}
+.grapics {
+  grid-area: grapics;
+  overflow: hidden;
+  width: 100%;
+  min-width: 500px;
+  position: relative;
+}
+.circle {
+  position: absolute;
+  right: -5%;
+  border-radius: 100%;
+  background: var(--gray-primary-2);
+  width: 530px;
+  height: 500px;
+}
+.scroll-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--green-primary);
+  grid-area: scrollIcon;
+}
+.scroll-indicator img {
+  width: 22px;
+}
+.scroll-indicator p {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.grapics-img {
+  position: absolute;
+}
+.monitor {
+  width: 300px;
+  left: 120px;
+}
+.keyboard {
+  width: 200px;
+  top: 250px;
+  right: 20px;
+}
+.calculator {
+  width: 80px;
+  top: 50px;
+}
+.book {
+  width: 180px;
+  top: 220px;
+  left: -80px;
+}
+.diary {
+  width: 200px;
+  top: 280px;
+  left: 20px;
+}
+.pencil {
+  width: 80px;
+  top: 380px;
+  left: 170px;
+}
+.ruler {
+  width: 140px;
+  top: 80px;
+  left: -130px;
+}
