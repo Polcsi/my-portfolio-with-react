@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../css/tutoring.css";
+import Contact from "../components/Contact";
 // svgs
 import Calculator from "../icons/Calculator.svg";
 import Diary from "../icons/diary.svg";
@@ -132,6 +133,7 @@ const Tutoring = () => {
             <p>scroll to learn more</p>
           </motion.section>
         </div>
+        <Contact />
       </motion.section>
     </>
   );

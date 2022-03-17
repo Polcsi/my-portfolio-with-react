@@ -278,6 +278,23 @@
     font-size: clamp(0.7rem, 0.6vw, 1rem);
   }
   /* Tutoring Page */
+  .tutoring-page-header .titles h1 {
+    font-size: clamp(4rem, 5.8vw, 5.3rem);
+    margin: 0 0 10rem 0;
+  }
+  .tutoring-page-header .titles h1::before {
+    position: absolute;
+    top: clamp(5rem, 6.8vw, 6rem);
+    left: 0;
+    content: "tutoring";
+    color: var(--green-primary);
+  }
+  .tutoring-page-header .titles h1::after {
+    position: absolute;
+    top: clamp(10rem, 13.6vw, 12rem);
+    left: 0;
+    content: "services";
+  }
   .tutoring-page-container {
     height: 95vh;
     padding-top: 16vh;

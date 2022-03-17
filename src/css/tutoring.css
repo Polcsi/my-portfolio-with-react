@@ -8,7 +8,7 @@
   max-width: 1400px;
   margin: auto;
   padding-top: 15vh;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
   display: grid;
   grid-template-areas:
     "header grapics"
@@ -129,6 +129,11 @@
 }
 .small-screen-monitor {
   display: none;
+}
+@media screen and (min-width: 1600px) and (min-height: 900px) {
+  .tutoring-page-container {
+    height: 93vh;
+  }
 }
 @media screen and (max-width: 1220px) {
   .tutoring-page-container {

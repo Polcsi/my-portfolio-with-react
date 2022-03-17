@@ -173,7 +173,6 @@ export const showSingleGrapics = {
   },
   animate: (i) => {
     const delay = 1 + i * 0.4;
-    console.log(delay);
     return {
       opacity: 1,
       y: 0,

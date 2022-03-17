@@ -1,311 +1,348 @@
 @media screen and (max-width: 1280px) and (max-height: 720px) {
-    .transition-logo {
-        width: 65px;
-        height: 85px;
-    }
-    .primary-green-btn {
-        font-size: clamp(.7rem, .8vw, 1rem) !important;
-        padding: clamp(8px, 1.5vw ,10px) clamp(25px, 6vw, 35px) !important;
-    }
-    .section {
-        padding: 10vh 0;
-    }
-    /* nav */
-    .navbar{
-        padding: 2rem 1rem 1rem 1rem;
-    }
-    .navbar.sticky{
-        padding: 1rem 1rem 1.2rem 1rem !important;
-    }
-    .logo img {
-        width: 40px;
-    }
-    .menu-list li a {
-        font-size: clamp(1rem, 1.1vw, 1.6rem);
-        padding: .2rem 0;
-    }
-    /* home hero */
-    .hero-scroll-icon {
-        width: clamp(25px, 2vw, 50px);
-    }
-    /* Home */
-    .progress-bar {
-        height: clamp(2rem, 2.4vw, 2.7rem);
-    }
-    .progress-track {
-        height: clamp(2rem, 2.4vw, 2.7rem);
-    }
-    .about-text p {
-        font-size: clamp(.8rem, 1.4vw, 1rem);
-    }
-    .info {
-        gap: 4rem;
-        padding: 3rem;
-    }
-    .info-icon {
-        width: clamp(60px, 7vw, 80px);
-    }
-    .info article {
-        width: 300px;
-        grid-gap: 1.3rem;
-    }
-    .info article .info-title {
-        font-size: clamp(1.2rem, 1.5vw, 1.4rem);
-    }
-    .info article .info-text {
-        font-size: clamp(.7rem, 1vw, .9rem);
-    }
-    .skills-container {
-        gap: 1.3rem;
-    }
-    .skills-container article .title h3{
-        font-size: clamp(.9rem, 1.2vw, 1.2rem);
-    }
-    .skills-container article .percentage span {
-        font-size: clamp(.7rem, 1.4vw, .9rem);
-    }
-    .section-header h2 {
-        font-size: clamp(.9rem, 1.4vw, 1.3rem);
-    }
-    .section-header h1 {
-        font-size: clamp(2.1rem, 3.3vw, 3rem);
-    }
-    .service-cards {
-        gap: .7rem;
-    }
-    .service-card {
-        grid-template-rows: clamp(5.6rem, 9vw, 7rem) 5rem .5rem;
-        height: clamp(320px, 26vw, 400px);
-        width: 290px;
-        padding: 2.8rem;
-    }
-    .service-card img {
-        width: clamp(60px, 5vw, 80px);
-    }
-    .service-card h1 {
-        font-size: clamp(1.2rem, 1.4vw, 1.5rem);
-    }
-    .service-card p {
-        font-size: clamp(.9rem, 1vw, 1.1rem);
-    }
-    .achievements {
-        gap: .5rem;
-        margin-top: 2rem;
-    }
-    .achievement h1 {
-        font-size: 1.9rem;
-    }
-    .achievement p {
-        font-size: .9rem;
-    }
-    .plans {
-        gap: 2rem;
-    }
-    .pricing-plan {
-        width: 360px;
-    }
-    .pricing-card-header {
-        padding: 2.6rem;
-        height: clamp(18rem, 20vw , 22rem);
-    }
-    .pricing-card-header h3 {
-        font-size: clamp(1rem, 1.3vw, 1.4rem);
-    }
-    .pricing-card-header h1 {
-        font-size: clamp(4rem, 5vw , 5.2rem);
-    }
-    .pricing-card-details {
-        font-size: clamp(.9rem, 1.2vw, 1.2rem);
-        padding: 2rem 2rem 2rem 5.3rem;
-        gap: clamp(.9rem, 1vw, 1.3rem);
-    }
-    .featured-projects-section-grid {
-        grid-gap:  3rem 0;
-    }
-    .featured-projects-header h1{
-        font-size: clamp(2rem, 3vw, 2.9rem);
-    }
-    .featured-projects-header p{
-        font-size: clamp(.8rem, 1vw, 1rem);
-    }
-    .work-together-card {
-        padding: 2.5rem 3.5rem;
-        width: 84%;
-        gap: 1.5rem clamp(1rem, 3vw, 5rem);
-    }
-    .contact-cards {
-        gap: .7rem;
-        width: 100%;
-        max-width: 700px;
-        margin: auto;
-    }
-    .contact-cards > article {
-        padding: 1rem;
-        width: 300px;
-    }
-    .contact-cards article {
-        gap: 1.3rem;
-        padding: 1.2rem 1.4rem;
-        width: auto;
-    }
-    .contact-cards article svg {
-        font-size: clamp(1.3rem, 1.6vw, 1.6rem);
-    }
-    .contact-cards article p {
-        font-size: clamp(.8rem, 1vw, 1rem);
-    }
-    .mini-alert {
-        border-radius: 5px;
-        padding: 1.1rem 1.5rem;
-        gap: 1rem;
-    }
-    .mini-alert p {
-        font-size: clamp(.7rem, 1vw, 1rem);
-    }
-    .mini-alert svg {
-        font-size: clamp(1.5rem, 1.8vw, 1.7rem);
-    }
-    /* Contact Page */
-    .contact-page-form {
-        display: grid;
-        grid-template-areas:
-            'firstname lastname'
-            'email town'
-            'message message'
-            'btn btn';
-        grid-gap: 1rem;
-        width: 100%;
-        max-width: 900px;
-        margin: auto;
-    }  
-    .contact-title h1 {
-        font-size: 2.2rem;
-        text-align: center;
-        margin-bottom: .5rem;
-    }
-    .contact-title p {
-        text-align: center;
-        font-size: .7rem;
-    }
-    .contact-input {
-        padding: 0 1rem;
-        width: auto;
-        height: clamp(2.6rem, 4vw, 3.5rem);
-        font-size: clamp(.9rem, 1vw, 1.1rem);
-    }
-    .message {
-        padding:  1.2rem;
-        height: 200px;
-    }
-    .contact-page-container {
-        grid-template-areas: 
-        'title title'
-        'form form'
-        'map map';
-        grid-gap: 3rem 6rem;
-    }
-    .mapouter{
-        display: none;
-        height: auto;
-        width: 100%;
-        text-align: center;
-    }
-    .gmap_canvas {
-        height: auto;
-        width: 100%;
-        background-size: 2.5rem;
-    }
-    .submit-btn {
-        width: clamp(9rem, 11vw, 13rem);
-        height: clamp(2.5rem, 3vw, 3rem);
-        font-size: clamp(.8rem, 1vw, 1.1rem) !important;
-    }
-    /* Projects Page */
-    .projects-page-header {
-        gap: 2rem;
-    }
-    .projects-page-header-title h1{
-        font-size: clamp(1.9rem, 2.7vw, 2.5rem);
-    }
-    .projects-page-header-title p{
-        font-size: clamp(.7rem, 1vw, .9rem);
-    }
-    .category-btn {
-        border: 2px solid var(--green-primary) !important;
-        font-size: clamp(.7rem, .9vw, .9rem);
-        height: clamp(35px, 3vw, 40px);
-        padding: 0 1.5rem;
-    }
-    .featured-project-list {
-        gap: .8rem;
-    }
-    .featured-project-list article {
-        display: grid;
-        width: 390px;
-        gap: .8rem;
-    }
-    .project-header {
-        padding: clamp(1.5rem, 1.7vw, 2rem) clamp(1rem, 1.5vw, 2rem);
-    }
-    .project-body {
-        gap: .2rem;
-    }
-    .project-body h1 {
-        font-size: clamp(1rem, 1.35vw, 1.4rem);
-    }
-    .project-body a {
-        gap: .4em;
-        font-size: clamp(.7rem, .9vw, .9rem);
-        width: 130px;
-    }
-    .project-body a:active {transform: scale(0.94);}
-    .project-body a svg {
-        font-size: clamp(.7rem, 1vw, 1.1em);
-    }
-    /* Project Page */
-    .project-info-section {
-        margin: 0 .1rem;
-        margin-top: 4rem;
-    }
-    .project-info-section h1 {
-        font-size: clamp(2rem, 2.5vw, 3rem);
-        padding-bottom: 1rem;
-    }
-    .project-info-section h1::after {
-        width: 15%;
-        height: 2px;
-    }
-    .project-info-section p {
-        padding: 2.2rem 0;
-    }
-    .project-info-section a {
-        font-size: clamp(.8rem, 1vw, 1.1rem);
-    }
-     /* footer */
-    .upper-layer {
-        padding: .8rem 0;
-    }
-    .footer-logo img{
-        width: 35px;
-    }
-    .footer-socail-icons {
-        gap: 1.4rem;
-    }
-    .footer-socail-icons article a{
-        font-size: clamp(1rem, 1.4vw, 1.6rem);
-    }
-    .creator span:nth-child(1) {
-        font-size: clamp(.8rem, .9vw, 1.2rem);
-    }
-    .creator {
-        font-size: clamp(.7rem, .8vw, 1.1rem);
-        gap: .2rem;
-    }
-    .down-layer {
-        padding: .7rem;
-        gap: .2rem;
-    }
-    .down-layer span {
-        font-size: clamp(.7rem, .6vw, 1rem);
-    }
+  .transition-logo {
+    width: 65px;
+    height: 85px;
+  }
+  .primary-green-btn {
+    font-size: clamp(0.7rem, 0.8vw, 1rem) !important;
+    padding: clamp(8px, 1.5vw, 10px) clamp(25px, 6vw, 35px) !important;
+  }
+  .section {
+    padding: 10vh 0;
+  }
+  /* nav */
+  .navbar {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  .navbar.sticky {
+    padding: 1rem 1rem 1.2rem 1rem !important;
+  }
+  .logo img {
+    width: 40px;
+  }
+  .menu-list li a {
+    font-size: clamp(1rem, 1.1vw, 1.6rem);
+    padding: 0.2rem 0;
+  }
+  /* home hero */
+  .hero-scroll-icon {
+    width: clamp(25px, 2vw, 50px);
+  }
+  /* Home */
+  .progress-bar {
+    height: clamp(2rem, 2.4vw, 2.7rem);
+  }
+  .progress-track {
+    height: clamp(2rem, 2.4vw, 2.7rem);
+  }
+  .about-text p {
+    font-size: clamp(0.8rem, 1.4vw, 1rem);
+  }
+  .info {
+    gap: 4rem;
+    padding: 3rem;
+  }
+  .info-icon {
+    width: clamp(60px, 7vw, 80px);
+  }
+  .info article {
+    width: 300px;
+    grid-gap: 1.3rem;
+  }
+  .info article .info-title {
+    font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+  }
+  .info article .info-text {
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+  }
+  .skills-container {
+    gap: 1.3rem;
+  }
+  .skills-container article .title h3 {
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  }
+  .skills-container article .percentage span {
+    font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+  }
+  .section-header h2 {
+    font-size: clamp(0.9rem, 1.4vw, 1.3rem);
+  }
+  .section-header h1 {
+    font-size: clamp(2.1rem, 3.3vw, 3rem);
+  }
+  .service-cards {
+    gap: 0.7rem;
+  }
+  .service-card {
+    grid-template-rows: clamp(5.6rem, 9vw, 7rem) 5rem 0.5rem;
+    height: clamp(320px, 26vw, 400px);
+    width: 290px;
+    padding: 2.8rem;
+  }
+  .service-card img {
+    width: clamp(60px, 5vw, 80px);
+  }
+  .service-card h1 {
+    font-size: clamp(1.2rem, 1.4vw, 1.5rem);
+  }
+  .service-card p {
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+  }
+  .achievements {
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  .achievement h1 {
+    font-size: 1.9rem;
+  }
+  .achievement p {
+    font-size: 0.9rem;
+  }
+  .plans {
+    gap: 2rem;
+  }
+  .pricing-plan {
+    width: 360px;
+  }
+  .pricing-card-header {
+    padding: 2.6rem;
+    height: clamp(18rem, 20vw, 22rem);
+  }
+  .pricing-card-header h3 {
+    font-size: clamp(1rem, 1.3vw, 1.4rem);
+  }
+  .pricing-card-header h1 {
+    font-size: clamp(4rem, 5vw, 5.2rem);
+  }
+  .pricing-card-details {
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    padding: 2rem 2rem 2rem 5.3rem;
+    gap: clamp(0.9rem, 1vw, 1.3rem);
+  }
+  .featured-projects-section-grid {
+    grid-gap: 3rem 0;
+  }
+  .featured-projects-header h1 {
+    font-size: clamp(2rem, 3vw, 2.9rem);
+  }
+  .featured-projects-header p {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+  }
+  .work-together-card {
+    padding: 2.5rem 3.5rem;
+    width: 84%;
+    gap: 1.5rem clamp(1rem, 3vw, 5rem);
+  }
+  .contact-cards {
+    gap: 0.7rem;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+  }
+  .contact-cards > article {
+    padding: 1rem;
+    width: 300px;
+  }
+  .contact-cards article {
+    gap: 1.3rem;
+    padding: 1.2rem 1.4rem;
+    width: auto;
+  }
+  .contact-cards article svg {
+    font-size: clamp(1.3rem, 1.6vw, 1.6rem);
+  }
+  .contact-cards article p {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+  }
+  .mini-alert {
+    border-radius: 5px;
+    padding: 1.1rem 1.5rem;
+    gap: 1rem;
+  }
+  .mini-alert p {
+    font-size: clamp(0.7rem, 1vw, 1rem);
+  }
+  .mini-alert svg {
+    font-size: clamp(1.5rem, 1.8vw, 1.7rem);
+  }
+  /* Contact Page */
+  .contact-page-form {
+    display: grid;
+    grid-template-areas:
+      "firstname lastname"
+      "email town"
+      "message message"
+      "btn btn";
+    grid-gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+  }
+  .contact-title h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .contact-title p {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  .contact-input {
+    padding: 0 1rem;
+    width: auto;
+    height: clamp(2.6rem, 4vw, 3.5rem);
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+  }
+  .message {
+    padding: 1.2rem;
+    height: 200px;
+  }
+  .contact-page-container {
+    grid-template-areas:
+      "title title"
+      "form form"
+      "map map";
+    grid-gap: 3rem 6rem;
+  }
+  .mapouter {
+    display: none;
+    height: auto;
+    width: 100%;
+    text-align: center;
+  }
+  .gmap_canvas {
+    height: auto;
+    width: 100%;
+    background-size: 2.5rem;
+  }
+  .submit-btn {
+    width: clamp(9rem, 11vw, 13rem);
+    height: clamp(2.5rem, 3vw, 3rem);
+    font-size: clamp(0.8rem, 1vw, 1.1rem) !important;
+  }
+  /* Projects Page */
+  .projects-page-header {
+    gap: 2rem;
+  }
+  .projects-page-header-title h1 {
+    font-size: clamp(1.9rem, 2.7vw, 2.5rem);
+  }
+  .projects-page-header-title p {
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+  }
+  .category-btn {
+    border: 2px solid var(--green-primary) !important;
+    font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+    height: clamp(35px, 3vw, 40px);
+    padding: 0 1.5rem;
+  }
+  .featured-project-list {
+    gap: 0.8rem;
+  }
+  .featured-project-list article {
+    display: grid;
+    width: 390px;
+    gap: 0.8rem;
+  }
+  .project-header {
+    padding: clamp(1.5rem, 1.7vw, 2rem) clamp(1rem, 1.5vw, 2rem);
+  }
+  .project-body {
+    gap: 0.2rem;
+  }
+  .project-body h1 {
+    font-size: clamp(1rem, 1.35vw, 1.4rem);
+  }
+  .project-body a {
+    gap: 0.4em;
+    font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+    width: 130px;
+  }
+  .project-body a:active {
+    transform: scale(0.94);
+  }
+  .project-body a svg {
+    font-size: clamp(0.7rem, 1vw, 1.1em);
+  }
+  /* Project Page */
+  .project-info-section {
+    margin: 0 0.1rem;
+    margin-top: 4rem;
+  }
+  .project-info-section h1 {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    padding-bottom: 1rem;
+  }
+  .project-info-section h1::after {
+    width: 15%;
+    height: 2px;
+  }
+  .project-info-section p {
+    padding: 2.2rem 0;
+  }
+  .project-info-section a {
+    font-size: clamp(0.8rem, 1vw, 1.1rem);
+  }
+  /* footer */
+  .upper-layer {
+    padding: 0.8rem 0;
+  }
+  .footer-logo img {
+    width: 35px;
+  }
+  .footer-socail-icons {
+    gap: 1.4rem;
+  }
+  .footer-socail-icons article a {
+    font-size: clamp(1rem, 1.4vw, 1.6rem);
+  }
+  .creator span:nth-child(1) {
+    font-size: clamp(0.8rem, 0.9vw, 1.2rem);
+  }
+  .creator {
+    font-size: clamp(0.7rem, 0.8vw, 1.1rem);
+    gap: 0.2rem;
+  }
+  .down-layer {
+    padding: 0.7rem;
+    gap: 0.2rem;
+  }
+  .down-layer span {
+    font-size: clamp(0.7rem, 0.6vw, 1rem);
+  }
+  /* Tutoring Page */
+  .monitor {
+    width: 250px;
+    left: 160px;
+  }
+  .keyboard {
+    width: 170px;
+    top: 250px;
+    right: 20px;
+  }
+  .calculator {
+    width: 65px;
+    top: 30px;
+    left: 40px;
+  }
+  .book {
+    width: 170px;
+    top: 220px;
+    left: 0px;
+  }
+  .diary {
+    width: 185px;
+    top: 250px;
+    left: 100px;
+  }
+  .pencil {
+    width: 75px;
+    top: 340px;
+    left: 250px;
+  }
+  .ruler {
+    width: 130px;
+    top: 90px;
+    left: -30px;
+  }
 }

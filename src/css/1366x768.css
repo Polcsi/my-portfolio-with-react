@@ -268,6 +268,41 @@
     font-size: clamp(0.8rem, 1vw, 1.1rem);
   }
   /* Tutoring Page */
+  .tutoring-page-header {
+    gap: 1.5rem;
+    width: 95%;
+    max-width: 550px;
+  }
+  .tutoring-page-header .titles h1 {
+    font-size: clamp(4rem, 5.8vw, 5.3rem);
+    margin: 0 0 12rem 0;
+  }
+  .tutoring-page-header .titles h1::before {
+    position: absolute;
+    top: clamp(5rem, 6.8vw, 6rem);
+    left: 0;
+    content: "tutoring";
+    color: var(--green-primary);
+  }
+  .tutoring-page-header .titles h1::after {
+    position: absolute;
+    top: clamp(10rem, 13.6vw, 12rem);
+    left: 0;
+    content: "services";
+  }
+  .tutoring-page-header p {
+    font-size: clamp(0.76rem, 1.15vw, 0.9rem);
+    line-height: 1.8;
+  }
+  .scroll-indicator img {
+    width: 19px;
+  }
+  .scroll-indicator p {
+    font-size: clamp(0.76rem, 1.15vw, 0.9rem);
+  }
+  .circle {
+    height: 480px;
+  }
   .monitor {
     width: 260px;
     left: 160px;
@@ -288,13 +323,13 @@
     left: -20px;
   }
   .diary {
-    width: 200px;
+    width: 180px;
     top: 280px;
     left: 80px;
   }
   .pencil {
     width: 80px;
-    top: 380px;
+    top: 350px;
     left: 230px;
   }
   .ruler {
