@@ -127,3 +127,36 @@
   top: 80px;
   left: -130px;
 }
+.small-screen-monitor {
+  display: none;
+}
+@media screen and (max-width: 1220px) {
+  .tutoring-page-container {
+    padding-top: 15vh;
+    padding-bottom: 1rem;
+    grid-template-areas:
+      "header header"
+      "scrollIcon scrollIcon";
+    grid-gap: 2rem 0;
+  }
+  .grapics {
+    display: none;
+  }
+  .small-screen-monitor {
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    width: 290px;
+    display: unset;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .small-screen-monitor {
+    right: 0;
+  }
+}
+@media screen and (max-width: 950px) {
+  .small-screen-monitor {
+    display: none;
+  }
+}

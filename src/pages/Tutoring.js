@@ -57,6 +57,11 @@ const Tutoring = () => {
               contact
             </Link>
           </motion.div>
+          <img
+            className="small-screen-monitor"
+            src={Monitor}
+            alt="monitor-alt"
+          />
           <section className="grapics">
             <div className="circle">
               <img
