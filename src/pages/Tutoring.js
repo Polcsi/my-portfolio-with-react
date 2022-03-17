@@ -1,6 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { InitialTransition, content, title } from "../pageTransition";
+import {
+  InitialTransition,
+  content,
+  title,
+  secondaryTitle,
+  main,
+  showTutoringGrapics,
+  showSingleGrapics,
+} from "../pageTransition";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../css/tutoring.css";
@@ -42,65 +50,87 @@ const Tutoring = () => {
           ]}
         />
         <div className="tutoring-page-container">
-          <motion.div variants={title} className="tutoring-page-header">
-            <div className="titles">
+          <div className="tutoring-page-header">
+            <motion.div variants={title} className="titles">
               <h1>home</h1>
-            </div>
-            <p>
+            </motion.div>
+            <motion.p variants={secondaryTitle}>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
               dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
               sanctus est.
-            </p>
-            <Link className="green-rounded-btn" to="/contact">
-              contact
-            </Link>
-          </motion.div>
-          <img
+            </motion.p>
+            <motion.div variants={secondaryTitle}>
+              <Link className="green-rounded-btn" to="/contact">
+                contact
+              </Link>
+            </motion.div>
+          </div>
+          <motion.img
+            variants={showSingleGrapics}
+            custom={1}
             className="small-screen-monitor"
             src={Monitor}
             alt="monitor-alt"
           />
           <section className="grapics">
-            <div className="circle">
-              <img
+            <motion.div className="circle" variants={showTutoringGrapics}>
+              <motion.img
+                variants={showSingleGrapics}
+                custom={1}
                 className="grapics-img monitor"
                 src={Monitor}
                 alt="monitor-grapics"
               />
-              <img
+              <motion.img
+                variants={showSingleGrapics}
+                custom={2}
                 className="grapics-img keyboard"
                 src={Keyboard}
                 alt="keyboard-grapics"
               />
-              <img
+              <motion.img
+                variants={showSingleGrapics}
+                custom={3}
                 className="grapics-img calculator"
                 src={Calculator}
                 alt="calculator-grapics"
               />
-              <img className="grapics-img book" src={Book} alt="book-grapics" />
-              <img
+              <motion.img
+                variants={showSingleGrapics}
+                custom={4}
+                className="grapics-img book"
+                src={Book}
+                alt="book-grapics"
+              />
+              <motion.img
+                variants={showSingleGrapics}
+                custom={5}
                 className="grapics-img diary"
                 src={Diary}
                 alt="calculator-diary"
               />
-              <img
+              <motion.img
+                variants={showSingleGrapics}
+                custom={6}
                 className="grapics-img pencil"
                 src={Pencil}
                 alt="calculator-pencil"
               />
-              <img
+              <motion.img
+                variants={showSingleGrapics}
+                custom={7}
                 className="grapics-img ruler"
                 src={Ruler}
                 alt="calculator-ruler"
               />
-            </div>
+            </motion.div>
           </section>
-          <section className="scroll-indicator">
+          <motion.section variants={main} className="scroll-indicator">
             <img src={ScrollIcon} alt="scroll_mouse" />
             <p>scroll to learn more</p>
-          </section>
+          </motion.section>
         </div>
       </motion.section>
     </>

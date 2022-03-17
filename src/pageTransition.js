@@ -150,6 +150,43 @@ const circles = {
   },
 };
 
+export const showTutoringGrapics = {
+  initial: {
+    opacity: 0,
+    x: 200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
+
+export const showSingleGrapics = {
+  initial: {
+    opacity: 0,
+    y: -20,
+    x: 20,
+  },
+  animate: (i) => {
+    const delay = 1 + i * 0.4;
+    console.log(delay);
+    return {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        delay: 1.6,
+        duration: delay,
+        ease: [0.87, 0, 0.13, 1],
+      },
+    };
+  },
+};
+
 export const InitialTextTransition = () => {
   return (
     <div className="absolute">
