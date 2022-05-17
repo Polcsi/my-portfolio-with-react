@@ -14,6 +14,7 @@ import personGenerator from "./images/projects/person-generator.png";
 import dontLetFallTheBall from "./images/projects/donotletfalltheball.png";
 import tictactoe from "./images/projects/tictactoe.png";
 import birdLanguageConverter from "./images/projects/bird-language-converter.png";
+import calendar from "./images/projects/calendar.png";
 
 export const projects = [
   {
@@ -158,6 +159,15 @@ export const projects = [
     cover: birdLanguageConverter,
     url: "https://birdlanguageconverter.netlify.app/",
     date: "2022.03.20.",
+    info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
+  },
+  {
+    id: 17,
+    title: "Dynamic Calendar",
+    category: "program",
+    cover: calendar,
+    url: "https://codepen.io/polcsi/full/bGLqRbx",
+    date: "2022.05.17.",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam felis vel velit auctor vehicula. Duis blandit augue egestas elit euismod congue. Donec fringilla, quam eget viverra tempus, lorem sapien eleifend arcu, aliquam malesuada turpis odio quis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel neque tincidunt, lobortis justo id, mollis diam. Suspendisse malesuada magna semper nisi aliquet dapibus. Cras ornare ultrices gravida. Suspendisse potenti. Mauris quis vulputate mauris.",
   },
 ];
