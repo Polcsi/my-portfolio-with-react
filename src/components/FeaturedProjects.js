@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProjectList from "./ProjectList";
 import { motion } from "framer-motion";
@@ -9,6 +9,16 @@ import {
 } from "./ScrollTriggeredAnimations";
 
 const FeaturedProjects = () => {
+  useEffect(() => {
+    if ("loading" in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach((img) => {
+        img.src = img.dataset.src;
+        img.removeAttribute("loading");
+      });
+    }
+  }, []);
+
   return (
     <section className="featured-projects-section section" name="projects">
       <div className="section-container featured-projects-section-grid">
