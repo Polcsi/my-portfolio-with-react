@@ -501,6 +501,9 @@
   .project-body a svg {
     font-size: clamp(0.7rem, 1vw, 1.1em);
   }
+  .lazy {
+    height: clamp(120px, 40vw, 205px) !important;
+  }
   /* Project Page */
   .grid-info {
     display: grid;
