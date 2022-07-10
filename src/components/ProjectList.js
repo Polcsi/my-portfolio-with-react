@@ -11,7 +11,12 @@ const ProjectList = ({ amount, filter }) => {
     return (
       <article key={id}>
         <div className="project-header">
-          <img src={cover} alt={`${title}`} />
+          <img
+            data-src={cover}
+            alt={`${title}`}
+            loading="lazy"
+            className="project-images lazy lazy-background"
+          />
         </div>
         <div className="project-body">
           <h1>{title}</h1>

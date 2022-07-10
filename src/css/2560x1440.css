@@ -1,42 +1,47 @@
 @media all and (max-width: 2560px) and (max-height: 1440px) {
-    /* Home */
-    .info {
-        gap: 4rem;
-        padding: 5rem;
-        width: 100%;
-        justify-content: space-evenly;
-    }
-    .info article {
-        width: 400px;
-        grid-gap: 1.6rem;
-    }
-    .plans {
-        gap: 3rem;
-    }
-    .pricing-plan {
-       width: 530px;
-    }
-    .work-together-card {
-        padding: 3rem 4rem;
-        width: 95%;
-        grid-gap: 1.5rem clamp(1rem, 3vw, 5rem);
-        gap: 1.5rem clamp(1rem, 3vw, 5rem);
-    }
-    /* Projects Page */
-    .category-btn {
-        border: 2px solid var(--green-primary) !important;
-        font-size: clamp(1rem, 1vw, 1.15rem);
-        height: clamp(40px, 3.2vw, 50px);
-        width: auto;
-        padding: 0 1.7rem;
-    }
-    .mosaic-loader {
-        --cell-size: 24px;
-        --cell-spacing: .5px;
-        --border-width: 1px;
-        --cells: 3;
-        --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
-        width: var(--total-size);
-        height: var(--total-size);
-    }
+  /* Home */
+  .info {
+    gap: 4rem;
+    padding: 5rem;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .info article {
+    width: 400px;
+    grid-gap: 1.6rem;
+  }
+  .plans {
+    gap: 3rem;
+  }
+  .pricing-plan {
+    width: 530px;
+  }
+  .work-together-card {
+    padding: 3rem 4rem;
+    width: 95%;
+    grid-gap: 1.5rem clamp(1rem, 3vw, 5rem);
+    gap: 1.5rem clamp(1rem, 3vw, 5rem);
+  }
+  /* Projects Page */
+  .category-btn {
+    border: 2px solid var(--green-primary) !important;
+    font-size: clamp(1rem, 1vw, 1.15rem);
+    height: clamp(40px, 3.2vw, 50px);
+    width: auto;
+    padding: 0 1.7rem;
+  }
+  .mosaic-loader {
+    --cell-size: 24px;
+    --cell-spacing: 0.5px;
+    --border-width: 1px;
+    --cells: 3;
+    --total-size: calc(
+      var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing))
+    );
+    width: var(--total-size);
+    height: var(--total-size);
+  }
+  .lazy {
+    height: 260px !important;
+  }
 }
