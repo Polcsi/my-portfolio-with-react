@@ -14,7 +14,7 @@ const Skills = () => {
       var lazyloadImages;
 
       var lazyloadThrottleTimeout;
-      lazyloadImages = document.querySelectorAll(".lazy");
+      lazyloadImages = document.querySelectorAll(".lazy-skills-background");
 
       function lazyload() {
         if (lazyloadThrottleTimeout) {
@@ -27,7 +27,7 @@ const Skills = () => {
             if (img.offsetTop < window.innerHeight + scrollTop + 600) {
               console.log("Load Image");
               img.src = img.dataset.src;
-              img.classList.remove("lazy");
+              img.classList.remove("lazy-skills-background");
             }
           });
         }, 200);
@@ -80,7 +80,7 @@ const Skills = () => {
   }
 
   return (
-    <section className="skills-section lazy" name="skills">
+    <section className="skills-section lazy-skills-background" name="skills">
       <div className="skills-section-overlay section">
         {" "}
         <motion.div

@@ -78,7 +78,7 @@ body {
   --fixed-width: 620px;
 }
 
-.skills-section.lazy {
+.skills-section.lazy-skills-background {
   background-image: none;
   background-color: #f1f1fa;
 }
