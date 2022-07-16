@@ -90,10 +90,10 @@
   background: url("../icons/loading-buffering.gif");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 10%;
+  background-size: 8%;
 }
 .lazy {
-  width: 100% !important;
+  aspect-ratio: 16 / 9;
 }
 
 /* Loader */

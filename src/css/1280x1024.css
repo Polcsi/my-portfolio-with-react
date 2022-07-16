@@ -250,9 +250,6 @@
   .project-info-section a {
     font-size: clamp(0.8rem, 1vw, 1.1rem);
   }
-  .lazy {
-    height: 208px !important;
-  }
   /* footer */
   .upper-layer {
     padding: 0.8rem 0;

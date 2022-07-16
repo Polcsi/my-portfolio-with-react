@@ -76,9 +76,6 @@
     width: var(--total-size);
     height: var(--total-size);
   }
-  .lazy {
-    height: 240px !important;
-  }
   /* Project Page */
   .project-info-section h1 {
     font-size: clamp(2rem, 2.5vw, 3rem);
