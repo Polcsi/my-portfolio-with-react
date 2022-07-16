@@ -121,6 +121,7 @@
   background-color: transparent;
   box-sizing: border-box;
   border: var(--border-width) solid var(--cell-color);
+  will-change: background-color;
   animation: 1.5s ripple ease infinite;
 }
 .mosaic-loader > .cell.d-1 {
