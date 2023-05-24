@@ -60,12 +60,20 @@ const Projects = () => {
         document.ontouchmove = onPointerMove;
         document.ontouchend = onPointerEnd;
       } else {
+        document.onmousedown = startMouse;
         document.onmousemove = onPointerMove;
         document.onmouseup = onPointerEnd;
       }
 
+      function startMouse(e) {
+        let actualPos = categoriesRef.current.style.left;
+        let value = actualPos.substring(0, actualPos.length - 2);
+        start = parseFloat(value);
+      }
+
       function startTouch(e) {
-        let actualPos = e.path[1].style.left;
+        // let actualPos = e.path[1].style.left;
+        let actualPos = categoriesRef.current.style.left;
         let value = actualPos.substring(0, actualPos.length - 2);
         start = parseFloat(value);
       }
@@ -90,6 +98,7 @@ const Projects = () => {
 
       function onPointerEnd() {
         if (isTouchEvent) {
+          document.onmousedown = null;
           document.ontouchmove = null;
           document.ontouchend = null;
         } else {
